@@ -1,5 +1,6 @@
 // Set the 'NODE_ENV' variable
 process.env.NODE_ENV = process.env.NODE_ENV || 'development';
+var port = process.env.PORT || 8080
 
 // Load the module dependencies
 const configureMongoose = require('./config/mongoose');
@@ -12,10 +13,10 @@ const db = configureMongoose();
 const app = configureExpress();
 
 // Use the Express application instance to listen to the '3000' port
-app.listen(8000);
+app.listen(port);
 
 // Log the server status to the console
-console.log('Server running at http://localhost:8000/');
+console.log('Server running at http://localhost:'+ port +'/');
 
 // Use the module.exports property to expose our Express application instance for external usage
 module.exports = app;
