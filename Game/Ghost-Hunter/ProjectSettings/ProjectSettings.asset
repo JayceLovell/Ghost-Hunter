@@ -689,10 +689,10 @@ PlayerSettings:
   facebookXfbml: 0
   facebookFrictionlessRequests: 1
   apiCompatibilityLevel: 6
-  cloudProjectId: d7770d6f-c8b1-405f-baeb-6ef32958ce97
+  cloudProjectId: 
   framebufferDepthMemorylessMode: 0
-  projectName: Ghost-Hunter
-  organizationId: waynell_17
+  projectName: 
+  organizationId: 
   cloudEnabled: 0
   enableNativePlatformBackendsForNewInputSystem: 0
   disableOldInputManagerSupport: 0
