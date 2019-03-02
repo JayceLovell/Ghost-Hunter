@@ -10,6 +10,7 @@ public class Location : MonoBehaviour
     public Text Error;
     private void Start()
     {
+        Error= GameObject.Find("txtError").GetComponent<Text>();
         StartCoroutine(StartLocationService());
     }
     void Update()
