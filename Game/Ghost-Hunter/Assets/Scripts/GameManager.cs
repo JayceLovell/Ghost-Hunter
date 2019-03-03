@@ -9,30 +9,6 @@ public class GameManager : MonoBehaviour
     public static GameManager instance = null;              //Static instance of GameManager which allows it to be accessed by any other script.
     public Text txtVersion;
 
-    private bool _sfxMute;
-    private bool _backgroundMute;
-
-    public bool SfxMute {
-        get {
-            return _sfxMute;
-        }
-        set {
-            _sfxMute = value;
-        }
-    }
-
-    public bool BackgroundMute
-    {
-        get
-        {
-            return _backgroundMute;
-        }
-        set
-        {
-            _backgroundMute = value;
-        }
-    }
-
     //Awake is always called before any Start functions
     void Awake()
     {
