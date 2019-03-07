@@ -39,7 +39,7 @@ GhostSchema.statics.findOneByName = function(name, callback) {
 
 
 // Configure the 'UserSchema' to use getters and virtuals when transforming to JSON
-UserSchema.set('toJSON', {
+GhostSchema.set('toJSON', {
 	getters: true,
 	virtuals: true
 });
