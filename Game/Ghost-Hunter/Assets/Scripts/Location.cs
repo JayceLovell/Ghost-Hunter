@@ -5,12 +5,18 @@ using UnityEngine.UI;
 
 public class Location : MonoBehaviour
 {
-    public float latitude;
-    public float longitude;
+    private float latitude;
+    private float longitude;
+
+    public float secondsBeforeLocationUpdate;
+
     public Text Error;
+    public float Latitude { get => latitude; set => latitude = value; }
+    public float Longitude { get => longitude; set => longitude = value; }
+
     private void Start()
     {
-        Error= GameObject.Find("txtError").GetComponent<Text>();
+        Error = GameObject.Find("txtError").GetComponent<Text>();
         StartCoroutine(StartLocationService());
     }
     private IEnumerator StartLocationService()
@@ -50,13 +56,13 @@ public class Location : MonoBehaviour
         else
         {
             // Access granted and location value could be retrieved
-            Error.text += "\n Location Details \n Latitude: " + Input.location.lastData.latitude + "\n Longitude: " + Input.location.lastData.longitude + "\n Altitude: " + Input.location.lastData.altitude + "\n Horizontal Accuracy: " + Input.location.lastData.horizontalAccuracy + "\n TimeStamp: " + Input.location.lastData.timestamp;
+            //Error.text += "\n Location Details \n Latitude: " + Input.location.lastData.latitude + "\n Longitude: " + Input.location.lastData.longitude + "\n Altitude: " + Input.location.lastData.altitude + "\n Horizontal Accuracy: " + Input.location.lastData.horizontalAccuracy + "\n TimeStamp: " + Input.location.lastData.timestamp;
             latitude = Input.location.lastData.latitude;
             longitude = Input.location.lastData.longitude;
             //Error.text += "\n latitude: "+ Input.location.lastData.latitude;
             //Error.text += "\n longitude: "+ Input.location.lastData.longitude;
-            Error.text += "\n Giving new corrdinates in 30 seconds \n \n";
-            yield return new WaitForSeconds(30);
+            //Error.text += "\n Giving new corrdinates in 30 seconds \n \n";
+            yield return new WaitForSeconds(secondsBeforeLocationUpdate);
             StartCoroutine(StartLocationService());
         }
 
