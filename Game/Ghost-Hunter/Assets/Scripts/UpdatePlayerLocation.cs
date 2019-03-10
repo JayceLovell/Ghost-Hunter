@@ -22,12 +22,12 @@ public class UpdatePlayerLocation : MonoBehaviour
         if(TestLatitude != 0 && TestLongitude != 0)
         {
             //TO DO : Scaling
-            float latScale = 287 / 180;  //latitude goes from 0(Npole) to 180(Spole)
-            float longiScale = 720 / 360; //longitude goes from 0 to 360 (Greenwich)
-            testpos = new Vector3((TestLatitude * latScale), 0, (TestLongitude * longiScale));
-            transform.position = new Vector3((TestLatitude * latScale), 0, (TestLongitude * longiScale));
+            //float latScale = 287 / 43;  //latitude goes from 0(Npole) to 180(Spole)
+            //float longiScale = 190 / -79; //longitude goes from 0 to 360 (Greenwich)
+            //testpos = new Vector3((TestLatitude * latScale), 0, (TestLongitude * longiScale));
+            //transform.position = new Vector3((TestLatitude * latScale), 0, (TestLongitude * longiScale));
             //transform.position = Quaternion.AngleAxis(TestLongitude, Vector3.up) * Quaternion.AngleAxis(TestLatitude, Vector3.right) * new Vector3(0, 0, 1);
-            //transform.position = new Vector3(TestLongitude,0, TestLatitude);
+            transform.position = new Vector3(TestLongitude * 1000, 0, TestLatitude * 1000);
         }
         else
         {
