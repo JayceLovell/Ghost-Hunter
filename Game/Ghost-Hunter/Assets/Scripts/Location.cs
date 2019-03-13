@@ -16,8 +16,11 @@ public class Location : MonoBehaviour
 
     private void Start()
     {
-        if(Testing)
+        if (Testing)
+        {
             Error = GameObject.Find("txtError").GetComponent<Text>();
+            secondsBeforeLocationUpdate = 30;
+        }
         else
         {
             Error = GameObject.Find("txtError").GetComponent<Text>();
@@ -33,9 +36,19 @@ public class Location : MonoBehaviour
         // First, check if user has location service enabled
         if (!Input.location.isEnabledByUser)
         {
-            if (Testing)
-                Error.text +="\n User has not enabled GPS";
+                Error = GameObject.Find("txtError").GetComponent<Text>();
+                Error.enabled = true;
+                Error.text += "\n User has not enabled GPS";
+            
             yield break;
+        }
+        else
+        {
+            if (!Testing)
+            {
+                Error = GameObject.Find("txtError").GetComponent<Text>();
+                Error.enabled = false;
+            }
         }
 
         // Start service before querying location
