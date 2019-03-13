@@ -19,6 +19,7 @@ public class UpdatePlayerLocation : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        float inX, inY;
         if(TestLatitude != 0 && TestLongitude != 0)
         {
             //TO DO : Scaling
@@ -27,11 +28,20 @@ public class UpdatePlayerLocation : MonoBehaviour
             //testpos = new Vector3((TestLatitude * latScale), 0, (TestLongitude * longiScale));
             //transform.position = new Vector3((TestLatitude * latScale), 0, (TestLongitude * longiScale));
             //transform.position = Quaternion.AngleAxis(TestLongitude, Vector3.up) * Quaternion.AngleAxis(TestLatitude, Vector3.right) * new Vector3(0, 0, 1);
-            transform.position = new Vector3(TestLongitude * 1000, 0, TestLatitude * 1000);
+            inX = TestLatitude;
+            inY = TestLongitude;
         }
         else
         {
-            transform.position = new Vector3(Location.Longitude, 0,Location.Latitude);
+            inX = Location.Latitude; 
+            inY = Location.Longitude;
+
         }
+
+        float latToPos = (inY + 79.22752172f) * 36880.32669263936f;
+        float lonToPos = (inX - 43.78543639f) * 36880.32669263936f;
+
+        transform.position = new Vector3(latToPos, 0, lonToPos);
+
     }
 }
