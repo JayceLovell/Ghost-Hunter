@@ -30,8 +30,8 @@ public class Location : MonoBehaviour
     }
     private IEnumerator StartLocationService()
     {
-        //if (Testing)
-        //    Error.text += "\n Checking for location";
+        if (Testing)
+            Error.text += "\n Checking for location";
 
         // First, check if user has location service enabled
         if (!Input.location.isEnabledByUser)
