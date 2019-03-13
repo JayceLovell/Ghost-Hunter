@@ -1,0 +1,1128 @@
+fileFormatVersion: 2
+guid: 07d4d976679ac2e42ae2b7f25310d0b1
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: helllowupdate_0
+    21300002: helllowupdate_1
+    21300004: helllowupdate_2
+    21300006: helllowupdate_3
+    21300008: helllowupdate_4
+    21300010: helllowupdate_5
+    21300012: helllowupdate_6
+    21300014: helllowupdate_7
+    21300016: helllowupdate_8
+    21300018: helllowupdate_9
+    21300020: helllowupdate_10
+    21300022: helllowupdate_13
+    21300024: helllowupdate_14
+    21300026: helllowupdate_15
+    21300028: helllowupdate_16
+    21300030: helllowupdate_17
+    21300032: helllowupdate_18
+    21300034: helllowupdate_19
+    21300036: helllowupdate_20
+    21300038: helllowupdate_21
+    21300040: helllowupdate_22
+    21300042: helllowupdate_23
+    21300044: helllowupdate_24
+    21300046: helllowupdate_25
+    21300048: helllowupdate_26
+    21300050: helllowupdate_27
+    21300052: helllowupdate_28
+    21300054: helllowupdate_31
+    21300056: helllowupdate_32
+    21300058: helllowupdate_33
+    21300060: helllowupdate_34
+    21300062: helllowupdate_35
+    21300064: helllowupdate_36
+    21300066: helllowupdate_37
+    21300068: helllowupdate_38
+    21300070: helllowupdate_39
+    21300072: helllowupdate_40
+    21300074: helllowupdate_41
+    21300076: helllowupdate_43
+    21300078: helllowupdate_44
+    21300080: helllowupdate_48
+    21300082: helllowupdate_51
+    21300084: helllowupdate_55
+    21300086: helllowupdate_56
+    21300088: helllowupdate_61
+    21300090: helllowupdate_62
+    21300092: helllowupdate_65
+    21300094: helllowupdate_70
+    21300096: helllowupdate_71
+  externalObjects: {}
+  serializedVersion: 7
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 2
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: helllowupdate_0
+      rect:
+        serializedVersion: 2
+        x: 56.312527
+        y: 3693.7507
+        width: 136.95312
+        height: 215.07812
+      alignment: 9
+      pivot: {x: 0.49058732, y: 0.48237947}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05466393e5a02624aa83f76bf24e7d66
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: helllowupdate_1
+      rect:
+        serializedVersion: 2
+        x: 213.20317
+        y: 3838.2039
+        width: 111.562515
+        height: 144.76562
+      alignment: 9
+      pivot: {x: 0.5091031, y: 0.50285685}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7936bc293bc65004eb1e37d918d6215e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: helllowupdate_2
+      rect:
+        serializedVersion: 2
+        x: 702
+        y: 3844
+        width: 149
+        height: 133
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba77248d4390acd4b804dcb0a19cf7f5
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: helllowupdate_3
+      rect:
+        serializedVersion: 2
+        x: 889.5599
+        y: 3692.4346
+        width: 250.23431
+        height: 260
+      alignment: 9
+      pivot: {x: 0.49729463, y: 0.4925603}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 49aff59fb890b1d4e9b40e27b0135f60
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: helllowupdate_4
+      rect:
+        serializedVersion: 2
+        x: 1151.6094
+        y: 3883.2354
+        width: 160.39062
+        height: 107.65625
+      alignment: 9
+      pivot: {x: 0.4887482, y: 0.49941036}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e81c515749f465419f6bb7dd16009a2
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: helllowupdate_5
+      rect:
+        serializedVersion: 2
+        x: 1727.5316
+        y: 3627.141
+        width: 256.09375
+        height: 353.75
+      alignment: 9
+      pivot: {x: 0.49774158, y: 0.5027813}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b70b4d533bfa6714797ad3848bec5d23
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: helllowupdate_6
+      rect:
+        serializedVersion: 2
+        x: 2019.727
+        y: 3851.8286
+        width: 37.34375
+        height: 90.078125
+      alignment: 9
+      pivot: {x: 0.43576753, y: 0.4737153}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 85e925a9f67e6254db1f49f70649d54b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: helllowupdate_7
+      rect:
+        serializedVersion: 2
+        x: 2211.157
+        y: 3834.938
+        width: 195.54688
+        height: 165.06201
+      alignment: 9
+      pivot: {x: 0.502914, y: 0.50321555}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f53c6bfe1753117459b56acc6e54da5d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: helllowupdate_8
+      rect:
+        serializedVersion: 2
+        x: 2455.0474
+        y: 3877.0396
+        width: 92.03125
+        height: 51.015625
+      alignment: 9
+      pivot: {x: 0.52105, y: 0.49907157}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f5702769b8b8703449ad01f65b33954f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: helllowupdate_9
+      rect:
+        serializedVersion: 2
+        x: 2687
+        y: 3812
+        width: 271
+        height: 158
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 04950c8d5f2852646a4acf2c2cfd4eec
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: helllowupdate_10
+      rect:
+        serializedVersion: 2
+        x: 511
+        y: 3687
+        width: 170
+        height: 188
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7732b3242dfa0314c90fc9ade56cabc0
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: helllowupdate_13
+      rect:
+        serializedVersion: 2
+        x: 1423.0674
+        y: 3590.2373
+        width: 133.04688
+        height: 304.92188
+      alignment: 9
+      pivot: {x: 0.5181078, y: 0.50098884}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ba0922c912bd63419f4cc33121ba9c7
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: helllowupdate_14
+      rect:
+        serializedVersion: 2
+        x: 1236.9685
+        y: 3601.2678
+        width: 164.29688
+        height: 234.60938
+      alignment: 9
+      pivot: {x: 0.49015915, y: 0.49542955}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 90fe6bb5a672db344be68cb25bdeca0d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: helllowupdate_15
+      rect:
+        serializedVersion: 2
+        x: 2244.4531
+        y: 3590.2815
+        width: 131.09375
+        height: 226.79688
+      alignment: 9
+      pivot: {x: 0.5, y: 0.49038923}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b046f0e394777e040b1ef508a5b4135a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: helllowupdate_16
+      rect:
+        serializedVersion: 2
+        x: 2451.9302
+        y: 3767.8916
+        width: 107.65625
+        height: 49.0625
+      alignment: 9
+      pivot: {x: 0.47437862, y: 0.4709992}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 20004368d86d3824584739df9c62aa72
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: helllowupdate_17
+      rect:
+        serializedVersion: 2
+        x: 63.453133
+        y: 3497.8132
+        width: 90.07813
+        height: 162.34375
+      alignment: 9
+      pivot: {x: 0.46678218, y: 0.4846938}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: efc116bd7823b714e9357bcc18be3174
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: helllowupdate_18
+      rect:
+        serializedVersion: 2
+        x: 552
+        y: 3622
+        width: 92
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d782273dc9045554b999bdf8f46be2a1
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: helllowupdate_19
+      rect:
+        serializedVersion: 2
+        x: 995.18
+        y: 3606.0942
+        width: 80.31256
+        height: 62.734375
+      alignment: 9
+      pivot: {x: 0.4895888, y: 0.47670457}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d45281a83f5c974884f6dd2233ff774
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: helllowupdate_20
+      rect:
+        serializedVersion: 2
+        x: 2704
+        y: 3593
+        width: 250
+        height: 173
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 358ee3a5bf4cab2418eb324a86e0d8a4
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: helllowupdate_21
+      rect:
+        serializedVersion: 2
+        x: 474
+        y: 3515
+        width: 104
+        height: 84
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c2677583b294f94b84af680c8cedbe3
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: helllowupdate_22
+      rect:
+        serializedVersion: 2
+        x: 981.57837
+        y: 3440.5474
+        width: 168.20312
+        height: 140.85938
+      alignment: 9
+      pivot: {x: 0.49298579, y: 0.4930654}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d83afb548884454b8dba6f1249ed5e5
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: helllowupdate_23
+      rect:
+        serializedVersion: 2
+        x: 1406.2817
+        y: 3528.6838
+        width: 189.6875
+        height: 49.0625
+      alignment: 9
+      pivot: {x: 0.46770748, y: 0.6382962}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c1111b03b08752642af4533aef7c6766
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: helllowupdate_24
+      rect:
+        serializedVersion: 2
+        x: 2257
+        y: 3452
+        width: 287
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9fc1e9738a8b54c45b0591a072df0271
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: helllowupdate_25
+      rect:
+        serializedVersion: 2
+        x: 2720
+        y: 3405
+        width: 117
+        height: 157
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b6ffb7fbc3d9ed438b02ff38784ef42
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: helllowupdate_26
+      rect:
+        serializedVersion: 2
+        x: 469
+        y: 3336
+        width: 159
+        height: 159
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c9df01504b70e947985a1f2f99cafb0
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: helllowupdate_27
+      rect:
+        serializedVersion: 2
+        x: 1476
+        y: 3438
+        width: 63
+        height: 73
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c5bd32ca461c811459c336700b2669a1
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: helllowupdate_28
+      rect:
+        serializedVersion: 2
+        x: 1660.0237
+        y: 2784.8833
+        width: 373.28137
+        height: 287.34375
+      alignment: 9
+      pivot: {x: 0.57858855, y: 0.51372856}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d4e6e3418cb6af4abc2e0f3d0a1e851
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: helllowupdate_31
+      rect:
+        serializedVersion: 2
+        x: 2733
+        y: 3251
+        width: 158
+        height: 109
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 127b9d3b6348c9546989af1ba349486d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: helllowupdate_32
+      rect:
+        serializedVersion: 2
+        x: 386
+        y: 2929
+        width: 114
+        height: 127
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e51f932c6c023d248a1ce726c5185ede
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: helllowupdate_33
+      rect:
+        serializedVersion: 2
+        x: 776
+        y: 2899
+        width: 162
+        height: 149
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 39a31bed99eb4b34a8d3a7c1b3e8f3b4
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: helllowupdate_34
+      rect:
+        serializedVersion: 2
+        x: 1218
+        y: 2651
+        width: 219
+        height: 444
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd09eccdf50b0bd49af505fb46558a52
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: helllowupdate_35
+      rect:
+        serializedVersion: 2
+        x: 2247.1177
+        y: 2967.0554
+        width: 33.4375
+        height: 33.4375
+      alignment: 9
+      pivot: {x: 0.41517964, y: 0.52170706}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8936dd052b86de84f9024f4da870150b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: helllowupdate_36
+      rect:
+        serializedVersion: 2
+        x: 2273.868
+        y: 2967.0554
+        width: 33.4375
+        height: 33.4375
+      alignment: 9
+      pivot: {x: 0.48245475, y: 0.52170706}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b654063a3cdb2f41b85482245393884
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: helllowupdate_37
+      rect:
+        serializedVersion: 2
+        x: 2364
+        y: 2978
+        width: 10
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5dd76266e0da9974cab599ec40ad92f9
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: helllowupdate_38
+      rect:
+        serializedVersion: 2
+        x: 2421
+        y: 2970
+        width: 33
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 73ba230c3fe810048815d435ac394a6d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: helllowupdate_39
+      rect:
+        serializedVersion: 2
+        x: 2485
+        y: 2976
+        width: 12
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa0484407593cba4bb6e0354f1062b01
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: helllowupdate_40
+      rect:
+        serializedVersion: 2
+        x: 39
+        y: 2796
+        width: 294
+        height: 178
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2774b6a64393be64cbef899c006744b6
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: helllowupdate_41
+      rect:
+        serializedVersion: 2
+        x: 2250.0864
+        y: 2931.7349
+        width: 52.96875
+        height: 39.296875
+      alignment: 9
+      pivot: {x: 0.5175424, y: 0.49025226}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a96c560f4f9635c4db964c3e74534590
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: helllowupdate_43
+      rect:
+        serializedVersion: 2
+        x: 2357.743
+        y: 2896.6797
+        width: 29.53125
+        height: 29.53125
+      alignment: 9
+      pivot: {x: 0.41505456, y: 0.41719577}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8971a163b3ade3e439d27940a08fd6f9
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: helllowupdate_44
+      rect:
+        serializedVersion: 2
+        x: 2435
+        y: 2905
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 95a5731840a515f41852ca1451fec225
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: helllowupdate_48
+      rect:
+        serializedVersion: 2
+        x: 782
+        y: 2669
+        width: 140
+        height: 176
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa37c32a7cbaaff43a55c5cb3c75891d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: helllowupdate_51
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 2667
+        width: 141
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d157ee22a242374588ffa1608ff2331
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: helllowupdate_55
+      rect:
+        serializedVersion: 2
+        x: 1781.8208
+        y: 2565.594
+        width: 80.3125
+        height: 103.75
+      alignment: 9
+      pivot: {x: 0.50651294, y: 0.48584104}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b5e2f42fb0d7a8b45b905d9bdd62e568
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: helllowupdate_56
+      rect:
+        serializedVersion: 2
+        x: 805
+        y: 2579
+        width: 115
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 480be8bdcfea18946bed0f57daafb201
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: helllowupdate_61
+      rect:
+        serializedVersion: 2
+        x: 839
+        y: 2452
+        width: 37
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a00333076352cf743afd78395c3ffef6
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: helllowupdate_62
+      rect:
+        serializedVersion: 2
+        x: 1252
+        y: 2218
+        width: 151
+        height: 368
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ed4156176249ab418c3966dd2005bd8
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: helllowupdate_65
+      rect:
+        serializedVersion: 2
+        x: 751
+        y: 2331
+        width: 145
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 486018d7be5f62d468f0d103863e7c84
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: helllowupdate_70
+      rect:
+        serializedVersion: 2
+        x: 1224
+        y: 2048
+        width: 221
+        height: 103
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d4637f3a6d515f74092f43f369449ced
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: helllowupdate_71
+      rect:
+        serializedVersion: 2
+        x: 1255
+        y: 1831
+        width: 105
+        height: 162
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67def741a76b1344d85faa39e8444a18
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 3731db768a773e54b83037e4f6669e2b
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 636881047482737425
+  assetBundleName: 
+  assetBundleVariant: 
