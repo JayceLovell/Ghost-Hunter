@@ -19,7 +19,6 @@ public class UpdatePlayerLocation : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        float inX, inY;
         if(TestLatitude != 0 && TestLongitude != 0)
         {
             //TO DO : Scaling
@@ -28,20 +27,20 @@ public class UpdatePlayerLocation : MonoBehaviour
             //testpos = new Vector3((TestLatitude * latScale), 0, (TestLongitude * longiScale));
             //transform.position = new Vector3((TestLatitude * latScale), 0, (TestLongitude * longiScale));
             //transform.position = Quaternion.AngleAxis(TestLongitude, Vector3.up) * Quaternion.AngleAxis(TestLatitude, Vector3.right) * new Vector3(0, 0, 1);
-            inX = TestLatitude;
-            inY = TestLongitude;
+
+            float latToPos = (TestLongitude + 79.22752172f) * 36880.32669263936f;
+            float lonToPos = (TestLatitude - 43.78543639f) * 36880.32669263936f;
+            testpos = new Vector3(latToPos, 0, lonToPos);
+            transform.position = new Vector3(latToPos, 0, lonToPos);
         }
         else
         {
-            inX = Location.Latitude; 
-            inY = Location.Longitude;
+            float latToPos = (Location.Longitude + 79.22752172f) * 36880.32669263936f;
+            float lonToPos = (Location.Latitude - 43.78543639f) * 36880.32669263936f;
+
+            transform.position = new Vector3(latToPos, 0, lonToPos);
 
         }
-
-        float latToPos = (inY + 79.22752172f) * 36880.32669263936f;
-        float lonToPos = (inX - 43.78543639f) * 36880.32669263936f;
-
-        transform.position = new Vector3(latToPos, 0, lonToPos);
 
     }
 }
