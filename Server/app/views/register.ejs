@@ -1,0 +1,39 @@
+<%- include header%>
+<div style="max-width: 600px; margin-left:auto;margin-right:auto;">
+    <h1>Register:</h1><br>
+    <% if (locals.error) {%>
+        <p class="text-warning"><% error %></p>
+    <% } %>
+    <form method="POST" class="form-horizontal"  id="form-register">
+        
+        <div class="form-group">
+            <label for="input-email" class="col-sm-2 control-label">Email</label>
+            <div class="col-sm-10">
+                <input type="email" required class="form-control" id="input-email" name="email" placeholder="Email" value="">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="input-last-name" class="col-sm-2 control-label">Username</label>
+            <div class="col-sm-10">
+                <input type="text" required class="form-control" name="username" id="input-last-name" placeholder="Doe">
+            </div>
+        </div>    
+        <div class="form-group">
+            <label for="input-last-name" class="col-sm-2 control-label">Password</label>
+            <div class="col-sm-10">
+                <input type="password" required class="form-control" name="password" id="input-last-name" placeholder="Doe">
+            </div>
+        </div>    
+           
+        <div class="form-group">
+            <div class="col-sm-offset-2 col-sm-10">
+                <button type="submit" id="btn-register" class="btn btn-default">Submit</button>
+            </div>
+        </div>
+    </form>
+</div>
+
+<script>
+    
+</script>
+<%- include footer %>

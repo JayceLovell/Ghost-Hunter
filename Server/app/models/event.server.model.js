@@ -16,6 +16,10 @@ const EventSchema = new Schema({
     ghostName:{
         type: String,
         required: true
+    },
+    expireTime:{
+        type: Date,
+        default: Date.now() + 300000
     }
 });
 
