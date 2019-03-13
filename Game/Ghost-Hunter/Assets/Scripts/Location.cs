@@ -30,8 +30,8 @@ public class Location : MonoBehaviour
     }
     private IEnumerator StartLocationService()
     {
-        if (Testing)
-            Error.text += "\n Checking for location";
+        //if (Testing)
+        //    Error.text += "\n Checking for location";
 
         // First, check if user has location service enabled
         if (!Input.location.isEnabledByUser)
@@ -85,8 +85,8 @@ public class Location : MonoBehaviour
 
             if (Testing)
             {
-                Error.text += "\n Location Details \n Latitude: " + Input.location.lastData.latitude + "\n Longitude: " + Input.location.lastData.longitude + "\n Altitude: " + Input.location.lastData.altitude + "\n Horizontal Accuracy: " + Input.location.lastData.horizontalAccuracy + "\n TimeStamp: " + Input.location.lastData.timestamp;
-                Error.text += "\n Giving new corrdinates in 30 seconds \n \n";
+                Error.text = "\n Location Details \n Latitude: " + Input.location.lastData.latitude + "\n Longitude: " + Input.location.lastData.longitude + "\n Altitude: " + Input.location.lastData.altitude + "\n Horizontal Accuracy: " + Input.location.lastData.horizontalAccuracy + "\n TimeStamp: " + Input.location.lastData.timestamp;
+               
             }
             yield return new WaitForSeconds(secondsBeforeLocationUpdate);
             StartCoroutine(StartLocationService());
