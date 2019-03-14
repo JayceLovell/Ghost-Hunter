@@ -13,15 +13,15 @@ const GhostSchema = new Schema({
 		unique: true,
 		// Validate 'name' value existance
 		required: true
-    },
-    description: {
+	},
+	description: {
 		type: String,
 		// Trim the 'description' field
 		trim: true,
 		// Validate 'description' value existance
 		required: true
 	},
-    rarity: {
+  rarity: {
 		type: Number,
 
 		required: true

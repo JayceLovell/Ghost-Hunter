@@ -3,6 +3,7 @@ const index = require('../controllers/index.server.controller');
 const admin = require('../controllers/admin/index.server.controller');
 const users = require('../controllers/admin/users.server.controller');
 const events = require('../controllers/admin/events.server.controller');
+const locations = require('../controllers/admin/locations.server.controller');
 const ghosts = require('../controllers/admin/ghosts.server.controller');
 
 // Define the routes module' method
@@ -31,7 +32,24 @@ module.exports = function(app) {
 
     //events admin controller
     app.get('/admin/events', events.renderList);
+    app.get('/admin/events/edit', events.renderForm);
+    app.post('/admin/events/edit', function(req,res){
+        events.saveEvent(req,res);
+    });
+
+    //events admin controller
+    app.get('/admin/locations', locations.renderList);
+    app.get('/admin/locations/edit', locations.renderForm);
+    app.post('/admin/locations/edit', function(req,res){
+        locations.saveLocation(req,res);
+    });
+
+    //ghosts
     app.get('/admin/ghosts', ghosts.renderList);
+    app.get('/admin/ghosts/edit', ghosts.renderForm);
+    app.post('/admin/ghosts/edit', function(req,res){
+        ghosts.saveGhost(req,res);
+    });
 
     app.post('/admin', function(req,res){
         admin.login(req,res);  
