@@ -13,15 +13,15 @@ const GhostSchema = new Schema({
 		unique: true,
 		// Validate 'name' value existance
 		required: true
-    },
-    description: {
+	},
+	description: {
 		type: String,
 		// Trim the 'description' field
 		trim: true,
 		// Validate 'description' value existance
 		required: true
 	},
-    rarity: {
+  rarity: {
 		type: Number,
 
 		required: true
@@ -39,7 +39,7 @@ GhostSchema.statics.findOneByName = function(name, callback) {
 
 
 // Configure the 'UserSchema' to use getters and virtuals when transforming to JSON
-UserSchema.set('toJSON', {
+GhostSchema.set('toJSON', {
 	getters: true,
 	virtuals: true
 });

@@ -5,17 +5,19 @@ const Schema = mongoose.Schema;
 // Define a new 'UserSchema'
 const EventSchema = new Schema({
     
-	id: {
-		type: Number,
-		required: true
-    },
-    locationName:{
-        type: String,
+    location_id:{
+        type: mongoose.Schema.ObjectId,
+        ref: 'Location',
         required: true
     },
-    ghostName:{
-        type: String,
+    ghost_id:{
+        type: mongoose.Schema.ObjectId,
+        ref: 'Ghost',
         required: true
+    },
+    expireTime:{
+        type: Date,
+        default: Date.now() + 300000
     }
 });
 
