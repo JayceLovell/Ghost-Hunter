@@ -1,15 +1,20 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class UpdatePlayerLocation : MonoBehaviour
 {
     private Location Location;
+    private Vector3 playerGpsLocation;
 
     public float TestLongitude = 0;
     public float TestLatitude = 0;
     public Vector3 testpos;
-   // public GameObject Map;
+
+    public Vector3 PlayerGpsLocation { get => playerGpsLocation; set => playerGpsLocation = value; }
+
+    // public GameObject Map;
     // Start is called before the first frame update
     void Start()
     {
@@ -31,14 +36,14 @@ public class UpdatePlayerLocation : MonoBehaviour
             float latToPos = (TestLongitude + 79.22752172f) * 36880.32669263936f;
             float lonToPos = (TestLatitude - 43.78543639f) * 36880.32669263936f;
             testpos = new Vector3(latToPos, 0, lonToPos);
-            transform.position = new Vector3(latToPos, 0, lonToPos);
+            playerGpsLocation = new Vector3(latToPos, 0, lonToPos);
         }
         else
         {
             float latToPos = (Location.Longitude + 79.22752172f) * 36880.32669263936f;
             float lonToPos = (Location.Latitude - 43.78543639f) * 36880.32669263936f;
 
-            transform.position = new Vector3(latToPos, 0, lonToPos);
+            playerGpsLocation = new Vector3(latToPos, 0, lonToPos);
 
         }
 
