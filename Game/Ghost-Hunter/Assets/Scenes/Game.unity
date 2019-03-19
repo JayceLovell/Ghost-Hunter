@@ -1407,9 +1407,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1953913576}
-  - component: {fileID: 1953913575}
   - component: {fileID: 1953913578}
   - component: {fileID: 1953913577}
+  - component: {fileID: 1953913575}
   m_Layer: 0
   m_Name: GameController
   m_TagString: GameController
@@ -1437,7 +1437,7 @@ MonoBehaviour:
   XoutOfBounds: 0
   ZoutOfBounds: 0
   Error: {fileID: 1624107264}
-  Testing: 1
+  Testing: 0
 --- !u!4 &1953913576
 Transform:
   m_ObjectHideFlags: 0
@@ -1467,6 +1467,9 @@ MonoBehaviour:
   TestLongitude: 0
   TestLatitude: 0
   testpos: {x: 0, y: 0, z: 0}
+  Testing: 0
+  Error: {fileID: 0}
+  AllGameObjects: []
 --- !u!114 &1953913578
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1474,11 +1477,12 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1953913574}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e26d2fc6117880141842abb44aca9767, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  AllGameObjects: []
   secondsBeforeLocationUpdate: 1
   Testing: 0
   Error: {fileID: 1624107264}

@@ -54,9 +54,17 @@ public class Location : MonoBehaviour
         // First, check if user has location service enabled
         if (!Input.location.isEnabledByUser)
         {
-                Error = GameObject.Find("txtError").GetComponent<Text>();
-                Error.enabled = true;
-                Error.text += "\n User has not enabled GPS";
+            AllGameObjects = Resources.FindObjectsOfTypeAll(typeof(GameObject));
+            foreach (GameObject gameobject in AllGameObjects)
+            {
+                if (gameobject.name == "txtError")
+                {
+                    gameobject.SetActive(true);
+                    Error = gameobject.GetComponent<Text>();
+                    Error.enabled = true;
+                }
+            }
+            Error.text += "\n User has not enabled GPS";
             
             yield break;
         }
