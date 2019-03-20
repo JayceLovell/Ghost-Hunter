@@ -320,6 +320,18 @@ Prefab:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 4346969810992092, guid: b6ffd8cbf5cf84444b3c7ca58d452b37, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0.2558422
+      objectReference: {fileID: 0}
+    - target: {fileID: 4346969810992092, guid: b6ffd8cbf5cf84444b3c7ca58d452b37, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 0.9667186
+      objectReference: {fileID: 0}
+    - target: {fileID: 4346969810992092, guid: b6ffd8cbf5cf84444b3c7ca58d452b37, type: 2}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 29.647001
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b6ffd8cbf5cf84444b3c7ca58d452b37, type: 2}
   m_IsPrefabAsset: 0
@@ -2151,7 +2163,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Length: 0.81451064
+  m_Length: 0.8145105
   m_ChildTransform: {fileID: 1210047187}
   m_AttachedIK: {fileID: 0}
 --- !u!1001 &1824133465
@@ -2262,7 +2274,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Length: 0.7470317
+  m_Length: 0.74703133
   m_ChildTransform: {fileID: 1527434454}
   m_AttachedIK: {fileID: 0}
 --- !u!1 &1870913124
