@@ -176,12 +176,12 @@ TextureImporter:
       name: helllowupdate_2
       rect:
         serializedVersion: 2
-        x: 702
-        y: 3844
-        width: 149
-        height: 133
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 696.73444
+        y: 3838.1567
+        width: 164.29688
+        height: 144.76562
+      alignment: 9
+      pivot: {x: 0.48549655, y: 0.4997285}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -336,12 +336,12 @@ TextureImporter:
       name: helllowupdate_10
       rect:
         serializedVersion: 2
-        x: 511
-        y: 3687
-        width: 170
-        height: 188
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 504.1876
+        y: 3678.4539
+        width: 183.8281
+        height: 201.40625
+      alignment: 9
+      pivot: {x: 0.4994471, y: 0.50915194}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -516,12 +516,12 @@ TextureImporter:
       name: helllowupdate_21
       rect:
         serializedVersion: 2
-        x: 474
-        y: 3515
-        width: 104
-        height: 84
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 469.60944
+        y: 3510.3596
+        width: 115.46875
+        height: 95.9375
+      alignment: 9
+      pivot: {x: 0.48836213, y: 0.4861538}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -696,12 +696,12 @@ TextureImporter:
       name: helllowupdate_32
       rect:
         serializedVersion: 2
-        x: 386
-        y: 2929
-        width: 114
-        height: 127
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 377.23444
+        y: 2924.1729
+        width: 127.1875
+        height: 138.90625
+      alignment: 9
+      pivot: {x: 0.5170759, y: 0.49189398}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -716,12 +716,12 @@ TextureImporter:
       name: helllowupdate_33
       rect:
         serializedVersion: 2
-        x: 776
-        y: 2899
-        width: 162
-        height: 149
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 770.5781
+        y: 2893.8677
+        width: 174.0625
+        height: 160.39062
+      alignment: 9
+      pivot: {x: 0.49649873, y: 0.49649143}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -856,12 +856,12 @@ TextureImporter:
       name: helllowupdate_40
       rect:
         serializedVersion: 2
-        x: 39
-        y: 2796
-        width: 294
-        height: 178
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 36.406258
+        y: 2793.188
+        width: 304.9219
+        height: 187.73438
+      alignment: 9
+      pivot: {x: 0.49059695, y: 0.48905402}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -896,12 +896,12 @@ TextureImporter:
       name: helllowupdate_43
       rect:
         serializedVersion: 2
-        x: 2357.743
-        y: 2896.6797
+        x: 2357.9475
+        y: 2896.7585
         width: 29.53125
         height: 29.53125
       alignment: 9
-      pivot: {x: 0.41505456, y: 0.41719577}
+      pivot: {x: 0.40812665, y: 0.41453373}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -936,12 +936,12 @@ TextureImporter:
       name: helllowupdate_48
       rect:
         serializedVersion: 2
-        x: 782
-        y: 2669
-        width: 140
-        height: 176
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 778.6095
+        y: 2662.9614
+        width: 148.67188
+        height: 191.64062
+      alignment: 9
+      pivot: {x: 0.4936412, y: 0.49070272}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -956,12 +956,12 @@ TextureImporter:
       name: helllowupdate_51
       rect:
         serializedVersion: 2
-        x: 63
-        y: 2667
-        width: 141
-        height: 33
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 58.570328
+        y: 2661.7896
+        width: 152.57812
+        height: 47.109375
+      alignment: 9
+      pivot: {x: 0.49109066, y: 0.460852}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -996,12 +996,12 @@ TextureImporter:
       name: helllowupdate_56
       rect:
         serializedVersion: 2
-        x: 805
-        y: 2579
-        width: 115
-        height: 46
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 797.9695
+        y: 2570.7217
+        width: 119.375
+        height: 56.875
+      alignment: 9
+      pivot: {x: 0.5405703, y: 0.5499485}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1016,12 +1016,12 @@ TextureImporter:
       name: helllowupdate_61
       rect:
         serializedVersion: 2
-        x: 839
-        y: 2452
-        width: 37
-        height: 90
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 833.96124
+        y: 2455.602
+        width: 47.109375
+        height: 93.984375
+      alignment: 9
+      pivot: {x: 0.49966314, y: 0.44047952}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1056,12 +1056,12 @@ TextureImporter:
       name: helllowupdate_65
       rect:
         serializedVersion: 2
-        x: 751
-        y: 2331
-        width: 145
-        height: 91
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 746.88306
+        y: 2330.7114
+        width: 158.4375
+        height: 99.84375
+      alignment: 9
+      pivot: {x: 0.4835787, y: 0.4586023}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1123,6 +1123,6 @@ TextureImporter:
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
-  userData: 636881047482737425
+  userData: 636887159679491718
   assetBundleName: 
   assetBundleVariant: 
