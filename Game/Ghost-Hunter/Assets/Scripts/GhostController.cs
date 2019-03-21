@@ -9,8 +9,10 @@ public class GhostController : MonoBehaviour {
     private float speed;
     private bool ghostCaught = false;
     private bool ghostMove = false;
+    private int health = 100;
     public Text countText;
     public Text winText;
+    public Text healthText;
     public Vector3 wayPoint = new Vector3(0, 0, 0);
     public int difficulty = 1;
 
@@ -36,15 +38,17 @@ public class GhostController : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-        countText.text = count.ToString();
+        healthText.text = "Ghost Health: " + health.ToString();
 
         while (count > 0) {
             count--;
+            countText.text = count.ToString();
         }
 
         if (count <= 0)
         {
             ghostMove = true;
+            countText.text = "";
         }
 
         if (ghostMove == true)
@@ -59,7 +63,17 @@ public class GhostController : MonoBehaviour {
             }
         }
 
+        if (health <= 0)
+        {
+            ghostCaught = true;
+            winText.text = "You caught the ghost!";
+            Destroy(this.gameObject);
+        }
     }
 
+    public void DamageGhost(int damage)
+    {
+        health = health - damage;
+    }
 
 }
