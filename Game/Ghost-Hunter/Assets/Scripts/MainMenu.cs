@@ -22,7 +22,12 @@ public class MainMenu : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            // this code is to go to a scene
+            //Application.LoadLevel("YourPreviousLevel");
+            Application.Quit();
+        }
     }
     public void Begin()
     {

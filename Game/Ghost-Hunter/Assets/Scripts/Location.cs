@@ -8,6 +8,7 @@ public class Location : MonoBehaviour
     private float latitude;
     private float longitude;
 
+    public Object[] AllGameObjects;
     public float secondsBeforeLocationUpdate;
     public bool Testing;
     public Text Error;
@@ -18,13 +19,30 @@ public class Location : MonoBehaviour
     {
         if (Testing)
         {
-            Error = GameObject.Find("txtError").GetComponent<Text>();
-            secondsBeforeLocationUpdate = 30;
+            AllGameObjects = Resources.FindObjectsOfTypeAll(typeof(GameObject));
+            foreach (GameObject gameobject in AllGameObjects)
+            {
+                if (gameobject.name == "txtError")
+                {
+                    gameobject.SetActive(true);
+                    Error = gameobject.GetComponent<Text>();
+                    Error.enabled = true;
+                }
+            }
         }
         else
         {
-            Error = GameObject.Find("txtError").GetComponent<Text>();
-            Error.enabled = false;
+
+            AllGameObjects = Resources.FindObjectsOfTypeAll(typeof(GameObject));
+            foreach (GameObject gameobject in AllGameObjects)
+            {
+                if (gameobject.name == "txtError")
+                {
+                    gameobject.SetActive(false);
+                    Error = gameobject.GetComponent<Text>();
+                    Error.enabled = false;
+                }
+            }
         }
         StartCoroutine(StartLocationService());
     }
@@ -36,9 +54,17 @@ public class Location : MonoBehaviour
         // First, check if user has location service enabled
         if (!Input.location.isEnabledByUser)
         {
-                Error = GameObject.Find("txtError").GetComponent<Text>();
-                Error.enabled = true;
-                Error.text += "\n User has not enabled GPS";
+            AllGameObjects = Resources.FindObjectsOfTypeAll(typeof(GameObject));
+            foreach (GameObject gameobject in AllGameObjects)
+            {
+                if (gameobject.name == "txtError")
+                {
+                    gameobject.SetActive(true);
+                    Error = gameobject.GetComponent<Text>();
+                    Error.enabled = true;
+                }
+            }
+            Error.text += "\n User has not enabled GPS";
             
             yield break;
         }
@@ -46,8 +72,16 @@ public class Location : MonoBehaviour
         {
             if (!Testing)
             {
-                Error = GameObject.Find("txtError").GetComponent<Text>();
-                Error.enabled = false;
+                AllGameObjects = Resources.FindObjectsOfTypeAll(typeof(GameObject));
+                foreach (GameObject gameobject in AllGameObjects)
+                {
+                    if (gameobject.name == "txtError")
+                    {
+                        gameobject.SetActive(false);
+                        Error = gameobject.GetComponent<Text>();
+                        Error.enabled = false;
+                    }
+                }
             }
         }
 
@@ -85,8 +119,7 @@ public class Location : MonoBehaviour
 
             if (Testing)
             {
-                Error.text = "\n Location Details \n Latitude: " + Input.location.lastData.latitude + "\n Longitude: " + Input.location.lastData.longitude + "\n Altitude: " + Input.location.lastData.altitude + "\n Horizontal Accuracy: " + Input.location.lastData.horizontalAccuracy + "\n TimeStamp: " + Input.location.lastData.timestamp;
-               
+                Error.text = "\n Location Details \n Latitude: " + Input.location.lastData.latitude + "\n Longitude: " + Input.location.lastData.longitude + "\n Altitude: " + Input.location.lastData.altitude + "\n Horizontal Accuracy: " + Input.location.lastData.horizontalAccuracy + "\n TimeStamp: " + Input.location.lastData.timestamp;         
             }
             yield return new WaitForSeconds(secondsBeforeLocationUpdate);
             StartCoroutine(StartLocationService());
