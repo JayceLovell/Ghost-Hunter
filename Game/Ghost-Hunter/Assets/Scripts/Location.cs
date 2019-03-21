@@ -5,22 +5,84 @@ using UnityEngine.UI;
 
 public class Location : MonoBehaviour
 {
-    public float latitude;
-    public float longitude;
+    private float latitude;
+    private float longitude;
+
+    public Object[] AllGameObjects;
+    public float secondsBeforeLocationUpdate;
+    public bool Testing;
     public Text Error;
+    public float Latitude { get => latitude; set => latitude = value; }
+    public float Longitude { get => longitude; set => longitude = value; }
+
     private void Start()
     {
-        Error= GameObject.Find("txtError").GetComponent<Text>();
+        if (Testing)
+        {
+            AllGameObjects = Resources.FindObjectsOfTypeAll(typeof(GameObject));
+            foreach (GameObject gameobject in AllGameObjects)
+            {
+                if (gameobject.name == "txtError")
+                {
+                    gameobject.SetActive(true);
+                    Error = gameobject.GetComponent<Text>();
+                    Error.enabled = true;
+                }
+            }
+        }
+        else
+        {
+
+            AllGameObjects = Resources.FindObjectsOfTypeAll(typeof(GameObject));
+            foreach (GameObject gameobject in AllGameObjects)
+            {
+                if (gameobject.name == "txtError")
+                {
+                    gameobject.SetActive(false);
+                    Error = gameobject.GetComponent<Text>();
+                    Error.enabled = false;
+                }
+            }
+        }
         StartCoroutine(StartLocationService());
     }
     private IEnumerator StartLocationService()
     {
-        Error.text += "\n Checking for location";
+        if (Testing)
+            Error.text += "\n Checking for location";
+
         // First, check if user has location service enabled
         if (!Input.location.isEnabledByUser)
         {
-            Error.text +="\n User has not enabled GPS";
+            AllGameObjects = Resources.FindObjectsOfTypeAll(typeof(GameObject));
+            foreach (GameObject gameobject in AllGameObjects)
+            {
+                if (gameobject.name == "txtError")
+                {
+                    gameobject.SetActive(true);
+                    Error = gameobject.GetComponent<Text>();
+                    Error.enabled = true;
+                }
+            }
+            Error.text += "\n User has not enabled GPS";
+            
             yield break;
+        }
+        else
+        {
+            if (!Testing)
+            {
+                AllGameObjects = Resources.FindObjectsOfTypeAll(typeof(GameObject));
+                foreach (GameObject gameobject in AllGameObjects)
+                {
+                    if (gameobject.name == "txtError")
+                    {
+                        gameobject.SetActive(false);
+                        Error = gameobject.GetComponent<Text>();
+                        Error.enabled = false;
+                    }
+                }
+            }
         }
 
         // Start service before querying location
@@ -37,26 +99,29 @@ public class Location : MonoBehaviour
         // Service didn't initialize in 20 seconds
         if (maxWait < 1)
         {
-            Error.text += "\n Error: Timed out";
+            if (Testing)
+                Error.text += "\n Error: Timed out";
             yield break;
         }
 
         // Connection has failed
         if (Input.location.status == LocationServiceStatus.Failed)
         {
-            Error.text += "\n Error: Unable to determine device location";
+            if (Testing)
+                Error.text += "\n Error: Unable to determine device location";
             yield break;
         }
         else
         {
             // Access granted and location value could be retrieved
-            Error.text += "\n Location Details \n Latitude: " + Input.location.lastData.latitude + "\n Longitude: " + Input.location.lastData.longitude + "\n Altitude: " + Input.location.lastData.altitude + "\n Horizontal Accuracy: " + Input.location.lastData.horizontalAccuracy + "\n TimeStamp: " + Input.location.lastData.timestamp;
             latitude = Input.location.lastData.latitude;
             longitude = Input.location.lastData.longitude;
-            //Error.text += "\n latitude: "+ Input.location.lastData.latitude;
-            //Error.text += "\n longitude: "+ Input.location.lastData.longitude;
-            Error.text += "\n Giving new corrdinates in 30 seconds \n \n";
-            yield return new WaitForSeconds(30);
+
+            if (Testing)
+            {
+                Error.text = "\n Location Details \n Latitude: " + Input.location.lastData.latitude + "\n Longitude: " + Input.location.lastData.longitude + "\n Altitude: " + Input.location.lastData.altitude + "\n Horizontal Accuracy: " + Input.location.lastData.horizontalAccuracy + "\n TimeStamp: " + Input.location.lastData.timestamp;         
+            }
+            yield return new WaitForSeconds(secondsBeforeLocationUpdate);
             StartCoroutine(StartLocationService());
         }
 
