@@ -1,6 +1,8 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class MiniGameController : MonoBehaviour
 {
@@ -8,21 +10,29 @@ public class MiniGameController : MonoBehaviour
     public GameObject ActiveGhost;
     public RaycastHit hit;
     public GameObject[] Ghosts;
+    public Transform Spawn;
 
     private LineRenderer _drawer;
     private GameObject[] _traps;
     private GameManager _gameManager;
+    private GhostMovement _ghoststats;
+
     // Start is called before the first frame update
     void Start()
     {
         Init();
+        Instantiate(ActiveGhost, Spawn);
+        SetGhostStats();
     }
+
     void Init()
     {
+        //Spawn = GameObject.FindGameObjectWithTag("Spawn").GetComponent<Transform>();
         _drawer = GetComponent<LineRenderer>();
-        _gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
-        // Add code here to chose ghost
-        ActiveGhost = Ghosts[Random.Range(0, 10)];
+        //_gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
+        // Add code here to chose ghost from network. this random is only here for testing
+        ActiveGhost = Ghosts[Random.Range(0, 11)];
+        _ghoststats = ActiveGhost.GetComponent<GhostMovement>();
     }
 
     // Update is called once per frame
@@ -52,5 +62,14 @@ public class MiniGameController : MonoBehaviour
             }
             ActiveGhost.GetComponent<GhostMovement>().Stuck = false;
         }
+    }
+    /// <summary>
+    /// Sets Ghost stats depending on type of Ghost
+    /// </summary>
+    private void SetGhostStats()
+    {
+        _ghoststats.Agent.speed =3;
+        _ghoststats.WanderRadius = 10;
+        _ghoststats.RandomRate = 4;
     }
 }

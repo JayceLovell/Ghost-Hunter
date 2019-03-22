@@ -1476,8 +1476,8 @@ GameObject:
   - component: {fileID: 4036990954046000}
   - component: {fileID: 95276374692160978}
   m_Layer: 0
-  m_Name: bug
-  m_TagString: Untagged
+  m_Name: Bug
+  m_TagString: Ghost
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

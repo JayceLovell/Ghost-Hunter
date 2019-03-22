@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -146,17 +146,17 @@ MonoBehaviour:
     type: 3}
   ActiveGhost: {fileID: 0}
   Ghosts:
-  - {fileID: 1924500424099460, guid: 86b7ee273d9239149aa2e539bbf3a2a1, type: 3}
-  - {fileID: 1147538929988806, guid: b6ffd8cbf5cf84444b3c7ca58d452b37, type: 3}
-  - {fileID: 1056897744641080, guid: 8c211b452297c424fac3d08ecd7f1e9f, type: 3}
-  - {fileID: 1124235821424622, guid: 2de5197f226ef754794bad8414ef65ba, type: 3}
-  - {fileID: 1840489513257326, guid: c134d3328752eb74aa748d24b6dac427, type: 3}
-  - {fileID: 1801832014888688, guid: ff02ab39bcfa63c43b34e5e5e889ba0c, type: 3}
-  - {fileID: 1990680468972340, guid: 54f5d706053739f46bcdc92e457193be, type: 3}
-  - {fileID: 1353500187927030, guid: 97c0b0ad8aa76794594246fb1e70b03f, type: 3}
-  - {fileID: 1196735514776030, guid: c2cfd8537bc450442865bcfb17e4f597, type: 3}
-  - {fileID: 1757617952242764, guid: a25e228b23b6ed1498ea7f0d28edac7a, type: 3}
-  - {fileID: 1682959277758094, guid: df1457624d7de394caa05c9b1a353d2d, type: 3}
+  - {fileID: 6842595298854345084, guid: e5bd9d9a7520e564782020830f198282, type: 3}
+  - {fileID: 8551458294161238142, guid: 1ee1b438ad4951f47bb4bde9a914e3fb, type: 3}
+  - {fileID: 6894749310339674500, guid: 324476130139f0147abd806229735304, type: 3}
+  - {fileID: 1025817798725890119, guid: eb5ba7434697df44cb7cdf0d260f1a18, type: 3}
+  - {fileID: 5868723392361892902, guid: ecb5630c26e87bc4ea261b281fe37ce0, type: 3}
+  - {fileID: 7668029690745634652, guid: c12592cfdd2edec4386cf278c1cc7809, type: 3}
+  - {fileID: 588623277843285439, guid: 78653ec0541b0fb4fb70730d698b4359, type: 3}
+  - {fileID: 792856986672183804, guid: ee42c58fc4cc3024ea44a96cbac7eb43, type: 3}
+  - {fileID: 1816389591767481343, guid: adb2fab72a1af04409763b73157de8b1, type: 3}
+  - {fileID: 2872337690917891670, guid: 503657394d5a24a4f9a316e38508a1b0, type: 3}
+  - {fileID: 756550684085387315, guid: dd72244e9c4abb54b83b807a5b3d0b3f, type: 3}
 --- !u!4 &315299187
 Transform:
   m_ObjectHideFlags: 0
