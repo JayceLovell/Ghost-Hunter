@@ -7,6 +7,7 @@ public class MiniGameController : MonoBehaviour
     public GameObject Obsticle;
     public GameObject ActiveGhost;
     public RaycastHit hit;
+    public GameObject[] Ghosts;
 
     private LineRenderer _drawer;
     private GameObject[] _traps;
@@ -20,6 +21,8 @@ public class MiniGameController : MonoBehaviour
     {
         _drawer = GetComponent<LineRenderer>();
         _gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
+        // Add code here to chose ghost
+        ActiveGhost = Ghosts[Random.Range(0, 10)];
     }
 
     // Update is called once per frame
