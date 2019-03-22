@@ -255,7 +255,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 41dd349c82bb2e44ca4525c071b0b566, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 41dd349c82bb2e44ca4525c071b0b566, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -915,6 +915,7 @@ GameObject:
   - component: {fileID: 1953913578}
   - component: {fileID: 1953913577}
   - component: {fileID: 1953913575}
+  - component: {fileID: 1953913579}
   m_Layer: 0
   m_Name: GameController
   m_TagString: GameController
@@ -991,3 +992,18 @@ MonoBehaviour:
   secondsBeforeLocationUpdate: 1
   Testing: 0
   Error: {fileID: 1624107264}
+--- !u!114 &1953913579
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1953913574}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e6ab3071bb2e4a4da6adf8772656876, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  checkInterval: 20
+  ghostSpawnPrefab: {fileID: 8573987531243063678, guid: 2609a10040a1df945b0baef65143a160,
+    type: 3}
