@@ -11,8 +11,8 @@ using Random = UnityEngine.Random;
 /// </summary>
 public class MiniGameController : MonoBehaviour
 {
-    [Header("Ghost HealthBar")]
-    public Slider HealthBar;
+    [Header("Ghost Health")]
+    //public GhostHealth HealthBar;
 
     [Header("Prefabs")]
     public GameObject Obsticle;    
@@ -81,12 +81,12 @@ public class MiniGameController : MonoBehaviour
     /// </summary>
     private void GhostHealth()
     {
-        HealthBar.value -= Random.Range(2f,10f);
-        if(HealthBar.value >= 0)
-        {
-            //Do stuff when ghost die
-            SceneManager.LoadScene("Game");
-        }
+        //HealthBar.BarValue -= Random.Range(0.02f,0.10f);
+        //if(HealthBar.BarValue >= 0)
+        //{
+        //    //Do stuff when ghost die
+        //    SceneManager.LoadScene("Game");
+        //}
     }
     /// <summary>
     /// Sets Ghost stats depending on type of Ghost
