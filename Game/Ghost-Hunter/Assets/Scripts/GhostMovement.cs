@@ -2,7 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
-
+/// <summary>
+/// Deals with Ghost Movement
+/// </summary>
 public class GhostMovement : MonoBehaviour
 {  
     public Vector3 areaOfSphere;
@@ -13,25 +15,28 @@ public class GhostMovement : MonoBehaviour
     private bool _stuck;
     private float _wanderRadius;
     private NavMeshAgent _agent;
+    private float _speed;
 
     public bool Stuck { get => _stuck; set => _stuck = value; }
     public float WanderRadius { get => _wanderRadius; set => _wanderRadius = value; }
     public float RandomRate { get => _randomRate; set => _randomRate = value; }
-    public NavMeshAgent Agent { get => _agent; set => _agent = value; }
+    public float Speed { get => _speed; set => _speed = value; }
 
     // Start is called before the first frame update
     void Start()
     {
-        Agent = GetComponent<UnityEngine.AI.NavMeshAgent>();
+        _agent = GetComponent<NavMeshAgent>();
         StartCoroutine(MoveAgent(Random.Range(1f, _randomRate)));
         WanderRadius = 10f;
+        Speed = 3f;
     }
 
     // Update is called once per frame
     void Update()
     {
+        _agent.speed = _speed;
         NavMeshPath path = new NavMeshPath();
-        Agent.CalculatePath(NewPoint, path);
+        _agent.CalculatePath(NewPoint, path);
         if (path.status == NavMeshPathStatus.PathInvalid)
         {
             Stuck = true;
@@ -45,7 +50,7 @@ public class GhostMovement : MonoBehaviour
     IEnumerator MoveAgent(float moveAgainInSeconds)
     {
         areaOfSphere = RandomNavSphere(this.transform.position, WanderRadius, -1);
-        Agent.destination = areaOfSphere;
+        _agent.destination = areaOfSphere;
         yield return new WaitForSeconds(moveAgainInSeconds);
         StartCoroutine(MoveAgent(Random.Range(1f, _randomRate)));
     }

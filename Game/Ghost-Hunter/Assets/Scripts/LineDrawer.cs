@@ -1,7 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+/// <summary>
+/// Draws on the screen to indicate the player catching a ghost
+/// </summary>
 public class LineDrawer : MonoBehaviour
 {
     private LineRenderer line;

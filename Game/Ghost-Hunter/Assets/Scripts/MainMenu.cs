@@ -3,7 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
-
+/// <summary>
+/// Script for Main Menu Scene
+/// </summary>
 public class MainMenu : MonoBehaviour
 {
     public AudioSource Tick;

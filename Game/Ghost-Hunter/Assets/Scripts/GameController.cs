@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class GameController : MonoBehaviour
 {
-    private UpdatePlayerLocation updatePlayerLocation;
+    private UpdatePlayerLocation _updatePlayerLocation;
 
     public Object[] AllGameObjects;
     public GameObject Player;
@@ -24,14 +24,14 @@ public class GameController : MonoBehaviour
     {
         if (Testing)
         {
-            lookForErrorText(true);  
+            _lookForErrorText(true);  
         }
         else
         {
-            lookForErrorText(false);
+            _lookForErrorText(false);
         }
         Player = GameObject.FindGameObjectWithTag("Player");
-        updatePlayerLocation = GetComponent<UpdatePlayerLocation>();
+        _updatePlayerLocation = GetComponent<UpdatePlayerLocation>();
         playerOutOfBounds = false;
     }
 
@@ -39,7 +39,7 @@ public class GameController : MonoBehaviour
     void Update()
     {
         //sets player position
-        Player.transform.position = updatePlayerLocation.PlayerGpsLocation;
+        Player.transform.position = _updatePlayerLocation.PlayerGpsLocation;
 
         Playerpositions = new Vector3(Player.transform.position.x, Player.transform.position.y, Player.transform.position.z);
         distanceBetweenX = this.gameObject.transform.position.x - Player.transform.position.x;
@@ -57,6 +57,10 @@ public class GameController : MonoBehaviour
     {
         StartCoroutine(CheckIfPlayerInGameZone());
     }
+    /// <summary>
+    /// After 10 seconds of start up Check if player is in school zone
+    /// </summary>
+    /// <returns></returns>
     private IEnumerator CheckIfPlayerInGameZone()
     {
         yield return new WaitForSeconds(10);
@@ -73,16 +77,20 @@ public class GameController : MonoBehaviour
         }
     }
 
-    private void lookForErrorText(bool value)
+    /// <summary>
+    /// This Method looks for Error Text Box for Debugging
+    /// </summary>
+    /// <param name="setOnorOff"></param>
+    private void _lookForErrorText(bool setOnorOff)
     {
         AllGameObjects = Resources.FindObjectsOfTypeAll(typeof(GameObject));
         foreach (GameObject gameobject in AllGameObjects)
         {
             if (gameobject.name == "txtError")
             {
-                gameobject.SetActive(value);
+                gameobject.SetActive(setOnorOff);
                 Error = gameobject.GetComponent<Text>();
-                Error.enabled = value;
+                Error.enabled = setOnorOff;
                 Error.text = "Testing out of Bounds";
             }
         }

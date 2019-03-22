@@ -2,7 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-
+/// <summary>
+/// This Updates Player Location Base on Data from Location Class
+/// <see cref="Location"/>
+/// </summary>
 public class UpdatePlayerLocation : MonoBehaviour
 {
     private Location Location;

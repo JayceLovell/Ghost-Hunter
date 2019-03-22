@@ -2,7 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-
+/// <summary>
+/// The Almighty Game Controller
+/// </summary>
 public class GameManager : MonoBehaviour
 {
 
@@ -20,7 +22,7 @@ public class GameManager : MonoBehaviour
             _sfxMute = value;
         }
     }
-
+    
     public bool BackgroundMute
     {
         get
@@ -33,7 +35,11 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    //Awake is always called before any Start functions
+    
+    /// <summary>
+    /// Awake is always called before any Start functions
+    /// Makes GameManager Omnipresent
+    /// </summary>
     void Awake()
     {
         //Check if instance already exists
@@ -55,14 +61,13 @@ public class GameManager : MonoBehaviour
         //Call the InitGame function to initialize the first level 
         InitGame();
     }
-
-    //Initializes the game for each level.
+    /// <summary>
+    /// Thing to Initialize put here.
+    /// </summary>
     void InitGame()
     {
         txtVersion.text ="Version: "+ Application.version;
     }
-
-
 
     //Update is called every frame.
     void Update()
