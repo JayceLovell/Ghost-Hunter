@@ -90,6 +90,7 @@ GameObject:
   - component: {fileID: 2519932260975098401}
   - component: {fileID: 2519932260975098407}
   - component: {fileID: 1824321987}
+  - component: {fileID: 654974674}
   m_Layer: 0
   m_Name: TestingGhost
   m_TagString: Untagged
@@ -146,4 +147,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f3468ebd005dac4592853ee389be680, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Agent: {fileID: 0}
+  Agent: {fileID: 2519932260975098407}
+  wanderRadius: 10
+  Newpos: {x: 0, y: 0, z: 0}
+  randomDirection: {x: 0, y: 0, z: 0}
+  newdirection: {x: 0, y: 0, z: 0}
+--- !u!65 &654974674
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2519932260975098406}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 4.28, y: 2.68, z: 4.45}
+  m_Center: {x: 0, y: 1.22, z: 0}
