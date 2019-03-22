@@ -12,7 +12,7 @@ using Random = UnityEngine.Random;
 public class MiniGameController : MonoBehaviour
 {
     [Header("Ghost Health")]
-    //public GhostHealth HealthBar;
+    public GhostHealth HealthBar;
 
     [Header("Prefabs")]
     public GameObject Obsticle;    
@@ -33,7 +33,7 @@ public class MiniGameController : MonoBehaviour
     {
         Init();
         Instantiate(_ghostToGet, new Vector3(0,0,0),Quaternion.identity);
-        ActiveGhost = GameObject.Find(_ghostToGet.name);
+        ActiveGhost = GameObject.FindGameObjectWithTag("Ghost");
         SetGhostStats();
     }
 
@@ -63,8 +63,12 @@ public class MiniGameController : MonoBehaviour
         if (Input.GetMouseButtonUp(0))
         {
             _drawer.positionCount = 0;
+            foreach (GameObject trap in _traps)
+            {
+                Destroy(trap);
+            }
         }
-        if (_ghostToGet.GetComponent<GhostMovement>().Stuck)
+        if (ActiveGhost.GetComponent<GhostMovement>().Stuck)
         {
             GhostHealth();
             _traps = GameObject.FindGameObjectsWithTag("Boarder");
@@ -72,7 +76,7 @@ public class MiniGameController : MonoBehaviour
             {
                 Destroy(trap);
             }
-            _ghostToGet.GetComponent<GhostMovement>().Stuck = false;
+            ActiveGhost.GetComponent<GhostMovement>().Stuck = false;
         }
     }
     /// <summary>
@@ -81,12 +85,12 @@ public class MiniGameController : MonoBehaviour
     /// </summary>
     private void GhostHealth()
     {
-        //HealthBar.BarValue -= Random.Range(0.02f,0.10f);
-        //if(HealthBar.BarValue >= 0)
-        //{
-        //    //Do stuff when ghost die
-        //    SceneManager.LoadScene("Game");
-        //}
+        HealthBar.BarValue -= Random.Range(1, 10);
+        if (HealthBar.BarValue >= 0)
+        {
+            //Do stuff when ghost die
+            SceneManager.LoadScene("Game");
+        }
     }
     /// <summary>
     /// Sets Ghost stats depending on type of Ghost
