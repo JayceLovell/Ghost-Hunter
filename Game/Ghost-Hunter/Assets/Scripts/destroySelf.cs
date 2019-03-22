@@ -9,6 +9,10 @@ public class destroySelf : MonoBehaviour
     {
         StartCoroutine(destroyMe());
     }
+    /// <summary>
+    /// Destroys object in 5 seconds
+    /// </summary>
+    /// <returns></returns>
     IEnumerator destroyMe()
     {
         yield return new WaitForSeconds(5f);

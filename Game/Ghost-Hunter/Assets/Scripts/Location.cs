@@ -2,7 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-
+/// <summary>
+/// Class that deals with location stuff
+/// </summary>
 public class Location : MonoBehaviour
 {
     private float latitude;
@@ -46,6 +48,11 @@ public class Location : MonoBehaviour
         }
         StartCoroutine(StartLocationService());
     }
+    /// <summary>
+    /// Gets the Location data from Mobile Users
+    /// MOBILE ONLY!!!
+    /// </summary>
+    /// <returns></returns>
     private IEnumerator StartLocationService()
     {
         if (Testing)
