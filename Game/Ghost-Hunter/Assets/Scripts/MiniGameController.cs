@@ -3,17 +3,25 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 using Random = UnityEngine.Random;
 /// <summary>
 /// Controller for MiniGame Scene
 /// </summary>
 public class MiniGameController : MonoBehaviour
 {
-    public GameObject Obsticle;
-    public GameObject ActiveGhost;
-    public RaycastHit hit;
+    [Header("Ghost HealthBar")]
+    public Slider HealthBar;
+
+    [Header("Prefabs")]
+    public GameObject Obsticle;    
     public GameObject[] Ghosts;
 
+    [Space()]
+    public GameObject ActiveGhost;
+
+    private RaycastHit _hit;
     private GameObject _ghostToGet;
     private LineRenderer _drawer;
     private GameObject[] _traps;
@@ -45,11 +53,11 @@ public class MiniGameController : MonoBehaviour
         {
             _drawer.positionCount++;
 
-            if (Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out hit, 100))
+            if (Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out _hit, 100))
             {
                 
-                _drawer.SetPosition(_drawer.positionCount -1,hit.point);
-                Instantiate(Obsticle, new Vector3(hit.point.x,0,hit.point.z),new Quaternion(0,0,0,0));
+                _drawer.SetPosition(_drawer.positionCount -1,_hit.point);
+                Instantiate(Obsticle, new Vector3(_hit.point.x,0,_hit.point.z),new Quaternion(0,0,0,0));
             }
         }
         if (Input.GetMouseButtonUp(0))
@@ -58,12 +66,26 @@ public class MiniGameController : MonoBehaviour
         }
         if (_ghostToGet.GetComponent<GhostMovement>().Stuck)
         {
+            GhostHealth();
             _traps = GameObject.FindGameObjectsWithTag("Boarder");
             foreach(GameObject trap in _traps)
             {
                 Destroy(trap);
             }
             _ghostToGet.GetComponent<GhostMovement>().Stuck = false;
+        }
+    }
+    /// <summary>
+    /// Decrease Ghost Health Bar
+    /// also if ghost dies it does other stuff
+    /// </summary>
+    private void GhostHealth()
+    {
+        HealthBar.value -= Random.Range(2f,10f);
+        if(HealthBar.value >= 0)
+        {
+            //Do stuff when ghost die
+            SceneManager.LoadScene("Game");
         }
     }
     /// <summary>
