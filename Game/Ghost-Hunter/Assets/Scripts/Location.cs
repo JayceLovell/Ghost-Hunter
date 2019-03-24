@@ -11,7 +11,7 @@ public class Location : MonoBehaviour
     private float longitude;
 
     public Object[] AllGameObjects;
-    public float secondsBeforeLocationUpdate;
+    public float SecondsBeforeLocationUpdate;
     public bool Testing;
     public Text Error;
     public float Latitude { get => latitude; set => latitude = value; }
@@ -128,7 +128,7 @@ public class Location : MonoBehaviour
             {
                 Error.text = "\n Location Details \n Latitude: " + Input.location.lastData.latitude + "\n Longitude: " + Input.location.lastData.longitude + "\n Altitude: " + Input.location.lastData.altitude + "\n Horizontal Accuracy: " + Input.location.lastData.horizontalAccuracy + "\n TimeStamp: " + Input.location.lastData.timestamp;         
             }
-            yield return new WaitForSeconds(secondsBeforeLocationUpdate);
+            yield return new WaitForSeconds(SecondsBeforeLocationUpdate);
             StartCoroutine(StartLocationService());
         }
 
