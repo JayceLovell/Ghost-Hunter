@@ -3,17 +3,25 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 using Random = UnityEngine.Random;
 /// <summary>
 /// Controller for MiniGame Scene
 /// </summary>
 public class MiniGameController : MonoBehaviour
 {
-    public GameObject Obsticle;
-    public GameObject ActiveGhost;
-    public RaycastHit hit;
+    [Header("Ghost Health")]
+    public GhostHealth HealthBar;
+
+    [Header("Prefabs")]
+    public GameObject Obsticle;    
     public GameObject[] Ghosts;
 
+    [Space()]
+    public GameObject ActiveGhost;
+
+    private RaycastHit _hit;
     private GameObject _ghostToGet;
     private LineRenderer _drawer;
     private GameObject[] _traps;
@@ -25,7 +33,7 @@ public class MiniGameController : MonoBehaviour
     {
         Init();
         Instantiate(_ghostToGet, new Vector3(0,0,0),Quaternion.identity);
-        ActiveGhost = GameObject.Find(_ghostToGet.name);
+        ActiveGhost = GameObject.FindGameObjectWithTag("Ghost");
         SetGhostStats();
     }
 
@@ -45,25 +53,43 @@ public class MiniGameController : MonoBehaviour
         {
             _drawer.positionCount++;
 
-            if (Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out hit, 100))
+            if (Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out _hit, 100))
             {
                 
-                _drawer.SetPosition(_drawer.positionCount -1,hit.point);
-                Instantiate(Obsticle, new Vector3(hit.point.x,0,hit.point.z),new Quaternion(0,0,0,0));
+                _drawer.SetPosition(_drawer.positionCount -1,_hit.point);
+                Instantiate(Obsticle, new Vector3(_hit.point.x,0,_hit.point.z),new Quaternion(0,0,0,0));
             }
         }
         if (Input.GetMouseButtonUp(0))
         {
             _drawer.positionCount = 0;
+            foreach (GameObject trap in _traps)
+            {
+                Destroy(trap);
+            }
         }
-        if (_ghostToGet.GetComponent<GhostMovement>().Stuck)
+        if (ActiveGhost.GetComponent<GhostMovement>().Stuck)
         {
+            GhostHealth();
             _traps = GameObject.FindGameObjectsWithTag("Boarder");
             foreach(GameObject trap in _traps)
             {
                 Destroy(trap);
             }
-            _ghostToGet.GetComponent<GhostMovement>().Stuck = false;
+            ActiveGhost.GetComponent<GhostMovement>().Stuck = false;
+        }
+    }
+    /// <summary>
+    /// Decrease Ghost Health Bar
+    /// also if ghost dies it does other stuff
+    /// </summary>
+    private void GhostHealth()
+    {
+        HealthBar.BarValue -= Random.Range(1, 10);
+        if (HealthBar.BarValue >= 0)
+        {
+            //Do stuff when ghost die
+            SceneManager.LoadScene("Game");
         }
     }
     /// <summary>

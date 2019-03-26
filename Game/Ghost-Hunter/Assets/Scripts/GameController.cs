@@ -18,6 +18,7 @@ public class GameController : MonoBehaviour
     public bool ZoutOfBounds;
     public Text Error;
     public bool Testing;
+    public AudioSource BackgroundAudio;
 
     // Start is called before the first frame update
     void Start()
@@ -48,8 +49,6 @@ public class GameController : MonoBehaviour
         ZoutOfBounds = (distanceBetweenZ < -82.6800f || distanceBetweenZ > 99.0200f);
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            // this code is to go to a scene
-            //Application.LoadLevel("YourPreviousLevel");
             Application.Quit();
         }   
     }
