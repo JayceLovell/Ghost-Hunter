@@ -123,6 +123,7 @@ GameObject:
   - component: {fileID: 115901803}
   - component: {fileID: 115901806}
   - component: {fileID: 115901805}
+  - component: {fileID: 115901801}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -130,6 +131,21 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &115901801
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 115901800}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e6ab3071bb2e4a4da6adf8772656876, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  checkInterval: 1
+  ghostSpawnPrefab: {fileID: 8573987531243063678, guid: b3b0c76d4d109d54a94e7cb2e4032df1,
+    type: 3}
 --- !u!4 &115901803
 Transform:
   m_ObjectHideFlags: 0
@@ -971,10 +987,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f6ca7bce5abae442b0a003cdbbfd70d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TestLongitude: 0
-  TestLatitude: 0
+  TestLongitude: -79.22752
+  TestLatitude: 43.785435
   testpos: {x: 0, y: 0, z: 0}
-  Testing: 0
+  Testing: 1
   Error: {fileID: 0}
   AllGameObjects: []
 --- !u!114 &1953913578
