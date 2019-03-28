@@ -990,7 +990,7 @@ MonoBehaviour:
   TestLongitude: -79.22752
   TestLatitude: 43.785435
   testpos: {x: 0, y: 0, z: 0}
-  Testing: 1
+  Testing: 0
   Error: {fileID: 0}
   AllGameObjects: []
 --- !u!114 &1953913578
