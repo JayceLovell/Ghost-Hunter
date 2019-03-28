@@ -135,4 +135,13 @@ public class Location : MonoBehaviour
         // Stop service if there is no need to query location updates continuously
         Input.location.Stop();
     }
+
+    public static float longitudeToScen(float lon)
+    {
+        return (lon + 79.22752172f) * 36880.32669263936f;
+    }
+    public static float latitudeToScen(float lat)
+    {
+        return (lat - 43.78543639f) * 36880.32669263936f;
+    }
 }
