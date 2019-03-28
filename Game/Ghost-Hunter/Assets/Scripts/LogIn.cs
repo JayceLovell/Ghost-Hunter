@@ -16,6 +16,7 @@ public class LogIn : MonoBehaviour
         userid = PlayerPrefs.GetString("userid", "not logged in");
 
         if (userid != "not logged in") {
+            GameObject.Find("GameManager").GetComponent<GameManager>().userid = userid;
             SceneManager.LoadScene("MainMenu");
         }
 
@@ -35,7 +36,7 @@ public class LogIn : MonoBehaviour
         form.AddField("username", UsernameText.text);
         form.AddField("password", PasswordText.text);
 
-        using (UnityWebRequest www = UnityWebRequest.Post("http://ghost-hunter-game.herokuapp.com/game/login", form))
+        using (UnityWebRequest www = UnityWebRequest.Post("https://ghost-hunter-game.herokuapp.com/game/login", form))
         {
             yield return www.SendWebRequest();
 
