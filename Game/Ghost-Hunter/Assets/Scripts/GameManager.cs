@@ -9,7 +9,6 @@ public class GameManager : MonoBehaviour
 {
 
     public static GameManager instance = null;              //Static instance of GameManager which allows it to be accessed by any other script.
-    public Text txtVersion;
 
     public string userid;
 
@@ -59,16 +58,6 @@ public class GameManager : MonoBehaviour
         //Sets this to not be destroyed when reloading scene
         DontDestroyOnLoad(gameObject);
 
-
-        //Call the InitGame function to initialize the first level 
-        InitGame();
-    }
-    /// <summary>
-    /// Thing to Initialize put here.
-    /// </summary>
-    void InitGame()
-    {
-        txtVersion.text ="Version: "+ Application.version;
     }
 
     //Update is called every frame.

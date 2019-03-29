@@ -45,7 +45,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Length: 0.12592956
+  m_Length: 0.12592955
   m_ChildTransform: {fileID: 4517058014418682}
   m_AttachedIK: {fileID: 0}
 --- !u!1 &1095103200368156
@@ -169,7 +169,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1196735514776030}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -177,7 +177,7 @@ Transform:
   - {fileID: 4282956539070234}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
 --- !u!95 &95934156808223374
 Animator:
   serializedVersion: 3
@@ -320,7 +320,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Length: 0.14342137
+  m_Length: 0.14342135
   m_ChildTransform: {fileID: 4263647553184186}
   m_AttachedIK: {fileID: 0}
 --- !u!1 &1349357094733370
@@ -368,7 +368,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Length: 0.14729458
+  m_Length: 0.14729479
   m_ChildTransform: {fileID: 4724856765758040}
   m_AttachedIK: {fileID: 0}
 --- !u!1 &1371288089052824
@@ -821,7 +821,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Length: 0.08442561
+  m_Length: 0.084425494
   m_ChildTransform: {fileID: 4406346106846840}
   m_AttachedIK: {fileID: 0}
 --- !u!1 &1842612138270516
@@ -971,7 +971,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Length: 0.26968515
+  m_Length: 0.26968518
   m_ChildTransform: {fileID: 4379425267251666}
   m_AttachedIK: {fileID: 0}
 --- !u!1 &1929821011240086
@@ -1019,7 +1019,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Length: 0.2316409
+  m_Length: 0.23164107
   m_ChildTransform: {fileID: 4615120804192972}
   m_AttachedIK: {fileID: 0}
 --- !u!1 &1956081204425778

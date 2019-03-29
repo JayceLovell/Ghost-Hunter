@@ -19,6 +19,7 @@ public class GameController : MonoBehaviour
     public Text Error;
     public bool Testing;
     public AudioSource BackgroundAudio;
+    public Text txtVersion;
 
     // Start is called before the first frame update
     void Start()
@@ -34,6 +35,7 @@ public class GameController : MonoBehaviour
         Player = GameObject.FindGameObjectWithTag("Player");
         _updatePlayerLocation = GetComponent<UpdatePlayerLocation>();
         playerOutOfBounds = false;
+        txtVersion.text = "Version: " + Application.version;
     }
 
     // Update is called once per frame
