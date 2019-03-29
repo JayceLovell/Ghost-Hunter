@@ -2,12 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-
+/// <summary>
+/// The Almighty Game Controller
+/// </summary>
 public class GameManager : MonoBehaviour
 {
 
     public static GameManager instance = null;              //Static instance of GameManager which allows it to be accessed by any other script.
-    public Text txtVersion;
+
+    public string userid;
 
     private bool _sfxMute;
     private bool _backgroundMute;
@@ -20,7 +23,7 @@ public class GameManager : MonoBehaviour
             _sfxMute = value;
         }
     }
-
+    
     public bool BackgroundMute
     {
         get
@@ -33,7 +36,11 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    //Awake is always called before any Start functions
+    
+    /// <summary>
+    /// Awake is always called before any Start functions
+    /// Makes GameManager Omnipresent
+    /// </summary>
     void Awake()
     {
         //Check if instance already exists
@@ -51,18 +58,7 @@ public class GameManager : MonoBehaviour
         //Sets this to not be destroyed when reloading scene
         DontDestroyOnLoad(gameObject);
 
-
-        //Call the InitGame function to initialize the first level 
-        InitGame();
     }
-
-    //Initializes the game for each level.
-    void InitGame()
-    {
-        txtVersion.text ="Version: "+ Application.version;
-    }
-
-
 
     //Update is called every frame.
     void Update()
