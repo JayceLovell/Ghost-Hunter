@@ -9,6 +9,7 @@ using UnityEngine.UI;
 public class MainMenu : MonoBehaviour
 {
     public AudioSource Tick;
+    public Text txtVersion;
 
     private GameManager _gameManager;
     private bool _backgroundMute;
@@ -19,6 +20,7 @@ public class MainMenu : MonoBehaviour
     void Start()
     {
         _gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
+        txtVersion.text = "Version: " + Application.version;
     }
 
     // Update is called once per frame

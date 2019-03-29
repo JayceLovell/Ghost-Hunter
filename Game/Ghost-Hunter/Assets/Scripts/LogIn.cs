@@ -9,17 +9,19 @@ public class LogIn : MonoBehaviour
 {
     public InputField UsernameText;
     public InputField PasswordText;
-    string userid;
+    public Text txtVersion;
+    private string _userid;
+
     // Start is called before the first frame update
     void Start()
     {
-        userid = PlayerPrefs.GetString("userid", "not logged in");
+        _userid = PlayerPrefs.GetString("userid", "not logged in");
 
-        if (userid != "not logged in") {
-            GameObject.Find("GameManager").GetComponent<GameManager>().userid = userid;
+        if (_userid != "not logged in") {
+            GameObject.Find("GameManager").GetComponent<GameManager>().userid = _userid;
             SceneManager.LoadScene("MainMenu");
         }
-
+        txtVersion.text = "Version: " + Application.version;
     }
 
     // Update is called once per frame
