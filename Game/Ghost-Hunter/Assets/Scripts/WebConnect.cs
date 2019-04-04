@@ -8,6 +8,8 @@ public class WebConnect : MonoBehaviour
 {
     float lastCheckTime = 0;
     public float checkInterval;
+    public GameObject northWestLocationObject;
+    public GameObject southEastLocationObject;
 
     public GameObject ghostSpawnPrefab;
     // Start is called before the first frame update
@@ -57,7 +59,10 @@ public class WebConnect : MonoBehaviour
             }
 
             if (!alreadySpawned) {
-                GameObject newGhost = Instantiate(ghostSpawnPrefab, new Vector3( Location.latitudeToScen(e.latitude), 0, Location.longitudeToScen(e.longitude)), Quaternion.identity)as GameObject;
+                Vector2 currentLatLong = new Vector2(e.latitude, e.longitude);
+                Vector3 pos = LatLon.GetUnityPosition(currentLatLong, northWestLocationObject.GetComponent<LocationMarker>().LatLon, southEastLocationObject.GetComponent<LocationMarker>().LatLon, northWestLocationObject.transform.position, southEastLocationObject.transform.position);
+                pos.y = 0;
+                GameObject newGhost = Instantiate(ghostSpawnPrefab, pos , Quaternion.identity)as GameObject;
                 newGhost.GetComponent<SpawnedGhost>().id = e._id;
                 Destroy(newGhost, e.expireTime);
             }

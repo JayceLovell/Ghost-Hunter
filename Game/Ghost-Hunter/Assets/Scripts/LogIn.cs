@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Android;
 using UnityEngine.Networking;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -15,13 +16,25 @@ public class LogIn : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        _userid = PlayerPrefs.GetString("userid", "not logged in");
+        if (Permission.HasUserAuthorizedPermission(Permission.FineLocation))
+        {
+            // The user authorized use of the location.
+            _userid = PlayerPrefs.GetString("userid", "not logged in");
 
-        if (_userid != "not logged in") {
-            GameObject.Find("GameManager").GetComponent<GameManager>().userid = _userid;
-            SceneManager.LoadScene("MainMenu");
+            if (_userid != "not logged in")
+            {
+                GameObject.Find("GameManager").GetComponent<GameManager>().userid = _userid;
+                SceneManager.LoadScene("MainMenu");
+            }
+            txtVersion.text = "Version: " + Application.version;
         }
-        txtVersion.text = "Version: " + Application.version;
+        else
+        {
+            // We do not have permission to use the location.
+            // Ask for permission or proceed without the functionality enabled.
+            Permission.RequestUserPermission(Permission.FineLocation);
+        }
+       
     }
 
     // Update is called once per frame
@@ -29,8 +42,15 @@ public class LogIn : MonoBehaviour
     {
         string username = UsernameText.text;
         string password = PasswordText.text;
-        StartCoroutine(GetRequest());
-    }
+        if (Permission.HasUserAuthorizedPermission(Permission.FineLocation))
+        {
+            StartCoroutine(GetRequest());
+        }else{
+            // We do not have permission to use the location.
+            // Ask for permission or proceed without the functionality enabled.
+            Permission.RequestUserPermission(Permission.FineLocation);
+
+        }
 
     IEnumerator GetRequest()
     {

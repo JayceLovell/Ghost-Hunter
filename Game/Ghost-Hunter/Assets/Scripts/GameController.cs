@@ -74,7 +74,7 @@ public class GameController : MonoBehaviour
         }
         if (playerOutOfBounds)
         {
-            SceneManager.LoadScene("MainMenu");
+            //SceneManager.LoadScene("MainMenu");
         }
     }
 
