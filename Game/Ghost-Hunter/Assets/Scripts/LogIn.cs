@@ -16,25 +16,26 @@ public class LogIn : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        //PlayerPrefs.DeleteAll();
         if (Permission.HasUserAuthorizedPermission(Permission.FineLocation))
         {
-            // The user authorized use of the location.
-            _userid = PlayerPrefs.GetString("userid", "not logged in");
+            //The user authorized use of the location.
+           _userid = PlayerPrefs.GetString("userid", "not logged in");
 
             if (_userid != "not logged in")
             {
                 GameObject.Find("GameManager").GetComponent<GameManager>().userid = _userid;
                 SceneManager.LoadScene("MainMenu");
             }
+
             txtVersion.text = "Version: " + Application.version;
-        }
-        else
+        }else
         {
             // We do not have permission to use the location.
             // Ask for permission or proceed without the functionality enabled.
             Permission.RequestUserPermission(Permission.FineLocation);
         }
-       
+
     }
 
     // Update is called once per frame
@@ -45,11 +46,13 @@ public class LogIn : MonoBehaviour
         if (Permission.HasUserAuthorizedPermission(Permission.FineLocation))
         {
             StartCoroutine(GetRequest());
-        }else{
+        }
+        else
+        {
             // We do not have permission to use the location.
             // Ask for permission or proceed without the functionality enabled.
             Permission.RequestUserPermission(Permission.FineLocation);
-
+        }
         }
 
     IEnumerator GetRequest()
@@ -65,8 +68,7 @@ public class LogIn : MonoBehaviour
             if (www.isNetworkError || www.isHttpError)
             {
                 Debug.Log(www.error);
-            }
-            else
+            }else
             {
                 string response =  www.downloadHandler.text;
                 if (response != "login error" && response != "incorrect password") {
