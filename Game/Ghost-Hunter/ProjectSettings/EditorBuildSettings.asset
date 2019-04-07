@@ -12,6 +12,9 @@ EditorBuildSettings:
     path: Assets/Scenes/LogInMenu.unity
     guid: 8924e07bdfa88984f9d65b91a542e204
   - enabled: 1
+    path: Assets/Scenes/Register.unity
+    guid: 7ad9b88994ff18f4e9074a1f872f891b
+  - enabled: 1
     path: Assets/Scenes/MainMenu.unity
     guid: 718e4c56baad7ee4ebf8cc79f742e157
   - enabled: 1

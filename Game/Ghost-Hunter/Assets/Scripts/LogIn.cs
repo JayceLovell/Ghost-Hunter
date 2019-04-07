@@ -38,7 +38,9 @@ public class LogIn : MonoBehaviour
 
     }
 
-    // Update is called once per frame
+    /// <summary>
+    /// Attemp toLogin with button press
+    /// </summary>
     public void TryLogIn()
     {
         string username = UsernameText.text;
@@ -53,8 +55,14 @@ public class LogIn : MonoBehaviour
             // Ask for permission or proceed without the functionality enabled.
             Permission.RequestUserPermission(Permission.FineLocation);
         }
-        }
-
+    }
+    /// <summary>
+    /// Carrys user to Register Scene
+    /// </summary>
+    public void Register()
+    {
+        SceneManager.LoadSceneAsync("Register",LoadSceneMode.Additive);
+    }
     IEnumerator GetRequest()
     {
         WWWForm form = new WWWForm();

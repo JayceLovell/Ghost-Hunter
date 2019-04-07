@@ -42,7 +42,7 @@ NavMeshAgent:
   m_GameObject: {fileID: 1025817798725890119}
   m_Enabled: 1
   m_AgentTypeID: 0
-  m_Radius: 1.31
+  m_Radius: 1.77
   m_Speed: 3.5
   m_Acceleration: 8
   avoidancePriority: 50
@@ -67,11 +67,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f3468ebd005dac4592853ee389be680, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Agent: {fileID: 0}
-  wanderRadius: 0
   areaOfSphere: {x: 0, y: 0, z: 0}
   randomPoints: {x: 0, y: 0, z: 0}
   NewPoint: {x: 0, y: 0, z: 0}
+  _stuck: 0
 --- !u!1001 &3812849322685015319
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -79,10 +78,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2518883087333934470}
     m_Modifications:
-    - target: {fileID: 1124235821424622, guid: 2de5197f226ef754794bad8414ef65ba, type: 3}
-      propertyPath: m_Name
-      value: DropOut
-      objectReference: {fileID: 0}
     - target: {fileID: 4027952354570180, guid: 2de5197f226ef754794bad8414ef65ba, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.66
@@ -126,6 +121,10 @@ PrefabInstance:
     - target: {fileID: 4027952354570180, guid: 2de5197f226ef754794bad8414ef65ba, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1124235821424622, guid: 2de5197f226ef754794bad8414ef65ba, type: 3}
+      propertyPath: m_Name
+      value: DropOut
       objectReference: {fileID: 0}
     - target: {fileID: 95641775271507006, guid: 2de5197f226ef754794bad8414ef65ba,
         type: 3}

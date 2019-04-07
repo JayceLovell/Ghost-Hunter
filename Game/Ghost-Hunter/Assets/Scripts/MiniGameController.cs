@@ -11,6 +11,7 @@ using Random = UnityEngine.Random;
 /// </summary>
 public class MiniGameController : MonoBehaviour
 {
+    public bool MiniGameStart;
     [Header("Ghost Health")]
     public GhostHealth HealthBar;
 
@@ -34,22 +35,23 @@ public class MiniGameController : MonoBehaviour
         Init();
         Instantiate(_ghostToGet, new Vector3(0,0,0),Quaternion.identity);
         ActiveGhost = GameObject.FindGameObjectWithTag("Ghost");
-        SetGhostStats();
+        StartGhost();
     }
 
     void Init()
     {
-        _drawer = GetComponent<LineRenderer>();
         //_gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
-        // Add code here to chose ghost from network. this random is only here for testing
+        _drawer = GetComponent<LineRenderer>();
+        // Add code here to choose ghost from network.
+        // Right now its just doing random for testing
+        // I recommend doing a method to call it from Game Manager
         _ghostToGet = Ghosts[Random.Range(0, 11)];
-        _ghoststats = _ghostToGet.GetComponent<GhostMovement>();
     }
 
-    // Update is called once per frame
-    void Update()
+    // FixedUpdate is called duh
+    void FixedUpdate()
     {
-        if (Input.GetMouseButton(0))
+        if (Input.GetMouseButton(0) && MiniGameStart)
         {
             _drawer.positionCount++;
 
@@ -60,16 +62,21 @@ public class MiniGameController : MonoBehaviour
                 Instantiate(Obsticle, new Vector3(_hit.point.x,0,_hit.point.z),new Quaternion(0,0,0,0));
             }
         }
-        if (Input.GetMouseButtonUp(0))
+        if (Input.GetMouseButtonUp(0) && MiniGameStart)
         {
             _drawer.positionCount = 0;
-            foreach (GameObject trap in _traps)
+            _traps = GameObject.FindGameObjectsWithTag("Boarder");
+            if (_traps.Length > 0)
             {
-                Destroy(trap);
+                foreach (GameObject trap in _traps)
+                {
+                    Destroy(trap);
+                }
             }
         }
-        if (ActiveGhost.GetComponent<GhostMovement>().Stuck)
+        if (ActiveGhost.GetComponent<GhostMovement>().Stuck && MiniGameStart)
         {
+            _drawer.positionCount = 0;
             GhostHealth();
             _traps = GameObject.FindGameObjectsWithTag("Boarder");
             foreach(GameObject trap in _traps)
@@ -86,19 +93,28 @@ public class MiniGameController : MonoBehaviour
     private void GhostHealth()
     {
         HealthBar.BarValue -= Random.Range(1, 10);
-        if (HealthBar.BarValue >= 0)
+        if (HealthBar.BarValue <= 0)
         {
             //Do stuff when ghost die
-            SceneManager.LoadScene("Game");
+            SceneManager.UnloadSceneAsync("MinGame");
         }
     }
     /// <summary>
     /// Sets Ghost stats depending on type of Ghost
+    /// Example the Difficulty of the Ghost
     /// </summary>
-    private void SetGhostStats()
+    private void StartGhost()
     {
-        _ghoststats.Speed = 6f;
-        _ghoststats.WanderRadius = 10f;
+        _ghoststats = ActiveGhost.GetComponent<GhostMovement>();
+        //Speed the Ghost moves around
+        _ghoststats.Speed = 10f;
+        //How far from position the next random target is set
+        //_ghoststats.WanderRadius = 20f; NO LONGER BEING USED
+        //Set the level of the ghost by RandomRate
+        // Lower the number faster the movement
         _ghoststats.RandomRate = 4f;
+        _ghoststats.Stuck = false;
+        StartCoroutine(_ghoststats.MoveAgent(5f));
+        MiniGameStart = true;
     }
 }

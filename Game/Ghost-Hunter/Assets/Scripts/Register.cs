@@ -3,28 +3,24 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class SpawnedGhost : MonoBehaviour
+public class Register : MonoBehaviour
 {
+    private GameManager _gameManager;
 
-    public string id;
     // Start is called before the first frame update
     void Start()
     {
-        
-
-    }
-
-    void OnMouseDown()
-    {
-        // this object was clicked - do something
-        Destroy(this.gameObject);
-        SceneManager.LoadSceneAsync("MiniGame", LoadSceneMode.Additive);
-
+        _gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
     }
 
     // Update is called once per frame
     void Update()
     {
         
+    }
+
+    public void RegisterButton()
+    {
+        SceneManager.UnloadSceneAsync("Register");
     }
 }
