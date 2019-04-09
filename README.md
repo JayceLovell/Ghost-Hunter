@@ -1,6 +1,7 @@
-# Ghost Hunter
-
-Winston Heraldo, Daniel Stokes, Jayce D. Lovell, Winston Koczkodaj, Aldrin Fernandez, James Li, Sargis Nahapetyan
+<h1 align="center">Ghost Hunter</h1>
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/19291090/55803766-fbfa4800-5aa8-11e9-8822-9ca3a4ec7892.png">
+</p>
 
 ## Summary
 
@@ -21,3 +22,31 @@ The game is set at centennial college however the campus is styled like a cartoo
 ## Ghosts Characters
 
 ![ghostdatabank](https://user-images.githubusercontent.com/19291090/51724915-906a1800-202d-11e9-95aa-04b19a8f4058.JPG)
+
+## Prerequisities
+* Android KitKat 4.4 and higher
+* On Centennial College Progress Campus
+* Student of Centennial College
+## Installing
+[link will be placed here at release one](https://github.com/JayceLovell/Ghost-Hunter)
+## Built With
+* [Unity](https://unity.com/) - The Client Side
+* [Heroku](https://www.heroku.com/) - Server Side
+## Acknowledgements
+### Server Side Programming
+* Daniel Stokes
+* James Li
+### Client Side Programming
+* Jayce D. Lovell ~~github master~~
+* Aldrin Fernandez
+* Sargis Nahapetyan
+### Documentations
+* Winston Heraldo
+### Other
+* Winston Koczkodaj
+### Motivation
+* Long hours between classes with nothing to do.
+* Pokemon Go
+* A good Grade
+## License
+This project is licensed under ~~**__insert legal stuff here__**~~
