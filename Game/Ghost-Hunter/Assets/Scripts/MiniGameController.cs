@@ -92,11 +92,12 @@ public class MiniGameController : MonoBehaviour
     /// </summary>
     private void GhostHealth()
     {
-        HealthBar.BarValue -= Random.Range(1, 10);
+        HealthBar.BarValue -= Random.Range(10, 20);
         if (HealthBar.BarValue <= 0)
         {
             //Do stuff when ghost die
-            SceneManager.UnloadSceneAsync("MinGame");
+            SceneManager.LoadScene("Game");
+            //SceneManager.UnloadSceneAsync("MinGame");
         }
     }
     /// <summary>

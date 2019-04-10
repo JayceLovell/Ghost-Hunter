@@ -243,11 +243,10 @@ MonoBehaviour:
   - {fileID: 1025817798725890119, guid: eb5ba7434697df44cb7cdf0d260f1a18, type: 3}
   - {fileID: 5868723392361892902, guid: ecb5630c26e87bc4ea261b281fe37ce0, type: 3}
   - {fileID: 7668029690745634652, guid: c12592cfdd2edec4386cf278c1cc7809, type: 3}
-  - {fileID: 588623277843285439, guid: 78653ec0541b0fb4fb70730d698b4359, type: 3}
+  - {fileID: 756550684085387315, guid: dd72244e9c4abb54b83b807a5b3d0b3f, type: 3}
   - {fileID: 792856986672183804, guid: ee42c58fc4cc3024ea44a96cbac7eb43, type: 3}
   - {fileID: 1816389591767481343, guid: adb2fab72a1af04409763b73157de8b1, type: 3}
   - {fileID: 2872337690917891670, guid: 503657394d5a24a4f9a316e38508a1b0, type: 3}
-  - {fileID: 756550684085387315, guid: dd72244e9c4abb54b83b807a5b3d0b3f, type: 3}
   ActiveGhost: {fileID: 0}
 --- !u!4 &315299187
 Transform:

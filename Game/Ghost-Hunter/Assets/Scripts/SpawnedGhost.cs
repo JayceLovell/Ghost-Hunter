@@ -18,13 +18,18 @@ public class SpawnedGhost : MonoBehaviour
     {
         // this object was clicked - do something
         Destroy(this.gameObject);
-        SceneManager.LoadSceneAsync("MiniGame", LoadSceneMode.Additive);
+        //SceneManager.LoadSceneAsync("MiniGame", LoadSceneMode.Additive);
+        SceneManager.LoadSceneAsync("MiniGame");
 
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    //// Update is called once per frame
+    //void Update()
+    //{
+    //    if (Input.GetMouseButton(0))
+    //    {
+    //        Destroy(this.gameObject);
+    //        SceneManager.LoadSceneAsync("MiniGame");
+    //    }
+    //}
 }

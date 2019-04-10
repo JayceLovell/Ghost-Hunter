@@ -41,7 +41,7 @@ public class GhostMovement : MonoBehaviour
         _agent.speed = _speed;
         NavMeshPath path = new NavMeshPath();
         _agent.CalculatePath(NewPoint, path);
-        if (path.status == NavMeshPathStatus.PathInvalid)
+        if (path.status == NavMeshPathStatus.PathPartial)
         {
             if (!_stuck)
             {
