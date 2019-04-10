@@ -28,7 +28,8 @@ The game is set at centennial college however the campus is styled like a cartoo
 * On Centennial College Progress Campus
 * Student of Centennial College
 ## Installing
-[link will be placed here at release one](https://github.com/JayceLovell/Ghost-Hunter)
+[Beta Apk](https://developer.cloud.unity3d.com/share/share.html?shareId=Zyk1xIXStE)
+![image](https://user-images.githubusercontent.com/19291090/55909132-3d721c80-5ba9-11e9-91d3-8ec0979f6476.png)
 ## Built With
 * [Unity](https://unity.com/) - The Client Side
 * [Heroku](https://www.heroku.com/) - Server Side
