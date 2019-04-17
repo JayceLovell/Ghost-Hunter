@@ -66,6 +66,7 @@ public class LogIn : MonoBehaviour
     IEnumerator GetRequest()
     {
         WWWForm form = new WWWForm();
+        
         form.AddField("username", UsernameText.text);
         form.AddField("password", PasswordText.text);
 
@@ -81,6 +82,7 @@ public class LogIn : MonoBehaviour
                 string response =  www.downloadHandler.text;
                 if (response != "login error" && response != "incorrect password") {
                     string userid = www.downloadHandler.text;
+                    userid = userid.Substring(1, userid.Length - 2);
                     GameObject.Find("GameManager").GetComponent<GameManager>().userid = userid;
                     PlayerPrefs.SetString("userid", userid);
                     SceneManager.LoadScene("MainMenu");

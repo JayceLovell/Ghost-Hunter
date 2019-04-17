@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Networking;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 /// <summary>
 /// The Almighty Game Controller
@@ -9,9 +11,10 @@ public class GameManager : MonoBehaviour
 {
 
     public static GameManager instance = null;              //Static instance of GameManager which allows it to be accessed by any other script.
-
+    public GameObject[] allghosts;
     public string userid;
-
+    public string ghost_id;
+    public GameObject miniGamePrefab;
     private bool _sfxMute;
     private bool _backgroundMute;
 
@@ -58,6 +61,39 @@ public class GameManager : MonoBehaviour
         //Sets this to not be destroyed when reloading scene
         DontDestroyOnLoad(gameObject);
 
+    }
+
+    public void Catch() {
+        StartCoroutine(PostCatch());
+    }
+
+    IEnumerator PostCatch()
+    {
+
+        Debug.Log("start catch");
+
+        WWWForm form = new WWWForm();
+
+        form.AddField("ghost_id", ghost_id);
+        form.AddField("user_id", PlayerPrefs.GetString("userid"));
+
+        using (UnityWebRequest www = UnityWebRequest.Post("https://ghost-hunter-game.herokuapp.com/game/inventory/catch", form))
+        {
+            yield return www.SendWebRequest();
+
+            if (www.isNetworkError || www.isHttpError)
+            {
+                Debug.Log(www.error);
+            }
+            else
+            {
+                string response = www.downloadHandler.text;
+                Debug.Log(response);
+                ghost_id = "";
+                SceneManager.LoadScene("Game");
+
+            }
+        }
     }
 
     //Update is called every frame.

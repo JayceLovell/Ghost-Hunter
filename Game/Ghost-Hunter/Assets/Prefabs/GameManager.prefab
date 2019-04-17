@@ -43,3 +43,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9090cbbb4c5696f4294640183b4c419f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  allghosts:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  userid: 
+  miniGamePrefab: {fileID: 0}

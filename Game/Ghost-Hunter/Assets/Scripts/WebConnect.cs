@@ -63,12 +63,12 @@ public class WebConnect : MonoBehaviour
                 Vector3 pos = LatLon.GetUnityPosition(currentLatLong, northWestLocationObject.GetComponent<LocationMarker>().LatLon, southEastLocationObject.GetComponent<LocationMarker>().LatLon, northWestLocationObject.transform.position, southEastLocationObject.transform.position);
                 pos.y = 0;
                 GameObject newGhost = Instantiate(ghostSpawnPrefab, pos , Quaternion.identity)as GameObject;
-                newGhost.GetComponent<SpawnedGhost>().id = e._id;
+                newGhost.GetComponent<SpawnedGhost>().id = e.ghost_id;
                 Destroy(newGhost, e.expireTime);
             }
         }
 
-        Debug.Log(response);
+        //Debug.Log(response);
     
     }
 

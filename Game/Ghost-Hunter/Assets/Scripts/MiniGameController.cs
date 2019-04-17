@@ -45,7 +45,44 @@ public class MiniGameController : MonoBehaviour
         // Add code here to choose ghost from network.
         // Right now its just doing random for testing
         // I recommend doing a method to call it from Game Manager
-        _ghostToGet = Ghosts[Random.Range(0, 11)];
+        string id = GameObject.FindObjectOfType<GameManager>().ghost_id;
+        switch (id) {
+            case "5c8ae14c08dec30017a19b3e":
+                _ghostToGet = Ghosts[3];
+                break;
+            case "5cafdc975f9359001740f15f":
+                _ghostToGet = Ghosts[8];
+                break;
+            case "5cafdca85f9359001740f160":
+                _ghostToGet = Ghosts[2];
+                break;
+            case "5cafdcb85f9359001740f161":
+                _ghostToGet = Ghosts[6];
+                break;
+            case "5cafdcd65f9359001740f167":
+                _ghostToGet = Ghosts[4];
+                break;
+            case "5cafdcf75f9359001740f168":
+                _ghostToGet = Ghosts[0];
+                break;
+            case "5cafdd0b5f9359001740f169":
+                _ghostToGet = Ghosts[9];
+                break;
+            case "5cafdd325f9359001740f16b":
+                _ghostToGet = Ghosts[1];
+                break;
+            case "5cafdd485f9359001740f16c":
+                _ghostToGet = Ghosts[5];
+                break;
+            case "5cafdd6b5f9359001740f16d":
+                _ghostToGet = Ghosts[7];
+                break;
+            default:
+                _ghostToGet = Ghosts[3];
+                break;
+
+        }
+       // _ghostToGet = Ghosts[Random.Range(0, 11)];
     }
 
     // FixedUpdate is called duh
@@ -96,8 +133,9 @@ public class MiniGameController : MonoBehaviour
         if (HealthBar.BarValue <= 0)
         {
             //Do stuff when ghost die
-            SceneManager.LoadScene("Game");
+            //SceneManager.LoadScene("Game");
             //SceneManager.UnloadSceneAsync("MinGame");
+            GameObject.FindObjectOfType<GameManager>().Catch();
         }
     }
     /// <summary>
