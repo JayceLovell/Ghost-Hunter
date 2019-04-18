@@ -16,17 +16,20 @@ public class CanvasController : MonoBehaviour
         
     }
 
+    //called by button to show inventory panel 
     public void ShowInventory() {
         inventoryPanel.SetActive(true);
         for (int i = 0; i < inventoryList.transform.childCount; i++) {
             inventoryList.transform.GetChild(i).GetComponent<Image>().color = new Color32(255, 255, 225, 20);
         }
 
+        //starts inventory request
         StartCoroutine(GetInventory());
     }
 
 
 
+    //makes a www get request to server for users inventory
     IEnumerator GetInventory()
     {
         string userId = GameObject.FindObjectOfType<GameManager>().userid;
@@ -49,6 +52,7 @@ public class CanvasController : MonoBehaviour
             yield break;
         }
 
+        //converts responce to an array that we can query easily
         string response = www.text;
         WebInventory[] newInventory = JsonHelper.getJsonArray<WebInventory>(response);
         Debug.Log(newInventory);
@@ -96,6 +100,7 @@ public class CanvasController : MonoBehaviour
 
     }
 
+    //called by button to hide inventory panel 
     public void HideInventory() {
         inventoryPanel.SetActive(false);
     }
@@ -106,6 +111,7 @@ public class CanvasController : MonoBehaviour
         
     }
 
+    //class used to convert json server inventory array to usable data
     [Serializable]
     public class WebInventory
     {

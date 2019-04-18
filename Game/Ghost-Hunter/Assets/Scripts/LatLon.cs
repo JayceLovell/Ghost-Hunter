@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
+//class that lets us place markers in the scene and set their real world long and lat to set the scen scale and position for spawning events and positioning the player
 public class LatLon
 {
     //class that converts latitude / longitude to Unity position and the reverse

@@ -12,7 +12,10 @@ public class GameManager : MonoBehaviour
 
     public static GameManager instance = null;              //Static instance of GameManager which allows it to be accessed by any other script.
     public GameObject[] allghosts;
+
+    //the userid from the server or preferences
     public string userid;
+    //the ghost id used to spawn minigame prefab and for inventory catching
     public string ghost_id;
     public GameObject miniGamePrefab;
     private bool _sfxMute;
@@ -67,6 +70,7 @@ public class GameManager : MonoBehaviour
         StartCoroutine(PostCatch());
     }
 
+    //post request to server to catch ghost
     IEnumerator PostCatch()
     {
 

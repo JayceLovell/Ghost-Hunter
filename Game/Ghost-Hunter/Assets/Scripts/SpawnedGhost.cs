@@ -19,6 +19,7 @@ public class SpawnedGhost : MonoBehaviour
 
     }
 
+    //perform this action when touched or clicked
     void OnMouseDown()
     {
 
