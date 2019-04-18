@@ -122,5 +122,11 @@ PrefabInstance:
       propertyPath: m_Text
       value: Ghost Imposter
       objectReference: {fileID: 0}
+    - target: {fileID: 7311814285234690580, guid: 8709f667f6365d147b24c09b19ad89d4,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 95bb710b339c7de41a4f19b4e82fb6d1,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8709f667f6365d147b24c09b19ad89d4, type: 3}

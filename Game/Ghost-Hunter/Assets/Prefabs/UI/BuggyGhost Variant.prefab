@@ -122,5 +122,11 @@ PrefabInstance:
       propertyPath: m_Text
       value: Buggy Ghost
       objectReference: {fileID: 0}
+    - target: {fileID: 3882390579146343425, guid: 7887c16959d1377468b15ac028d4497d,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: fd81519f89fbbaf42b93e84cc127a7b9,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7887c16959d1377468b15ac028d4497d, type: 3}

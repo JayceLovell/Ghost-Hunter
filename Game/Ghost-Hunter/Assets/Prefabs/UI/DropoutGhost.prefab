@@ -10,7 +10,7 @@ PrefabInstance:
     - target: {fileID: 6908412459238469245, guid: 3eb2b5bbd3184b646a3bee2cb22d9fd3,
         type: 3}
       propertyPath: m_Name
-      value: InventoryItem Variant
+      value: DropoutGhost
       objectReference: {fileID: 0}
     - target: {fileID: 9057717448141325876, guid: 3eb2b5bbd3184b646a3bee2cb22d9fd3,
         type: 3}
@@ -122,5 +122,11 @@ PrefabInstance:
       propertyPath: m_Text
       value: Dropout Ghost
       objectReference: {fileID: 0}
+    - target: {fileID: 3018103952255411883, guid: 3eb2b5bbd3184b646a3bee2cb22d9fd3,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 492ebeeea86a53d419c1a6b1f9aa9a88,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3eb2b5bbd3184b646a3bee2cb22d9fd3, type: 3}

@@ -122,5 +122,11 @@ PrefabInstance:
       propertyPath: m_Text
       value: Athlete Ghost
       objectReference: {fileID: 0}
+    - target: {fileID: 4647586800493173274, guid: d2c55b9ec49cb8041bf183bcc42df9d3,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 5c6bdec91b181bb49baee75208cc7f3b,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d2c55b9ec49cb8041bf183bcc42df9d3, type: 3}

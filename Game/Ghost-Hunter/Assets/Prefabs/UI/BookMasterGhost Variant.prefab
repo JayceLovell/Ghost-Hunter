@@ -122,5 +122,11 @@ PrefabInstance:
       propertyPath: m_Text
       value: Book Master Ghost
       objectReference: {fileID: 0}
+    - target: {fileID: 1056855779922695273, guid: 8332844e61a9f914b8ee3f11d4737d4a,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 7d1fd05626808de478eec93f5954edc9,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8332844e61a9f914b8ee3f11d4737d4a, type: 3}

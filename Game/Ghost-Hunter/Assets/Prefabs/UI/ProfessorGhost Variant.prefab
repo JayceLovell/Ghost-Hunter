@@ -122,5 +122,11 @@ PrefabInstance:
       propertyPath: m_Text
       value: Professor Ghost
       objectReference: {fileID: 0}
+    - target: {fileID: 3018103952255411883, guid: 3eb2b5bbd3184b646a3bee2cb22d9fd3,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 992a879e48f418b40921b6ec5bcb4e73,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3eb2b5bbd3184b646a3bee2cb22d9fd3, type: 3}
