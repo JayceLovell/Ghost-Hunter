@@ -75,6 +75,20 @@ module.exports = function(app) {
         events.getEvents(req,res);
     });
 
+    //catch ghost from event
+    app.post('/game/inventory/catch', function(req, res){
+        events.catch(req,res);
+    });
+
+    //get inventory
+    app.get('/game/inventory/get', function(req, res){
+        users.getInventory(req,res);
+    });
+
+    app.post('/game/login', function(req, res){
+        users.login(req,res);
+    });
+
 
 
 };

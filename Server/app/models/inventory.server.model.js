@@ -5,12 +5,14 @@ const Schema = mongoose.Schema;
 // Define a new 'UserSchema'
 const InventorySchema = new Schema({
     
-	username: {
-		type: String,
+	user_id: {
+		type: mongoose.Schema.ObjectId,
+        ref: 'User',
 		required: true
     },
-    ghostName:{
-        type: String,
+    ghost_id:{
+        type: mongoose.Schema.ObjectId,
+        ref: 'Ghost',
         required: true
     },
     quantity:{

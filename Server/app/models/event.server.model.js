@@ -17,7 +17,7 @@ const EventSchema = new Schema({
     },
     expireTime:{
         type: Date,
-        default: Date.now() + 300000
+        default: function(){return +new Date() + 3*60*1000 }
     }
 });
 

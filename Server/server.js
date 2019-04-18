@@ -16,21 +16,62 @@ const app = configureExpress();
 // app.listen(port);
 
 const server = require('http').createServer(app);
-const io = require('socket.io')(server);
-io.on('connection', client => {
-    console.log("client connected");
-    client.on('event', data => { 
-        
-     });
-    client.on('disconnect', () => { 
-        
-    });
-  });
 server.listen(port);
+
+var Event = require('mongoose').model('Event');
+var Location = require('mongoose').model('Location');
+var Ghost = require('mongoose').model('Ghost');
+
+
+var http = require("http");
+  setInterval(function() {
+    http.get("http://ghost-hunter-game.herokuapp.com");
+}, 300000);
+
+var minutes = 0.5, the_interval = minutes * 60 * 1000;
+setInterval( function() {
+  console.log("Perform event check and update if required")
+  RenewEvents();
+}, the_interval);
+
+function RenewEvents() {
+  console.log("Perform event check and update if required")
+  try{
+      
+    Event.find({},{}, function(err, events){
+      var date = new Date(); 
+      var timenow = date.getTime();
+      events.forEach(event => {
+        let timediff = ( event.expireTime.getTime() - timenow ) / 1000;
+        if(timediff > 0){
+            // console.log('time difference > 0');
+        }else{
+          var data = event;
+          Ghost.random(function(err, ghost){
+              console.log("random ghost error", err)
+              data.ghost_id = ghost._id
+              Location.random( function(err2, location){
+                  console.log("random location error", err2)
+                  data.location_id = location._id;
+                  data.expireTime = undefined;
+                  let updatedEvent = new Event(data);
+                  updatedEvent.save( function(err3){
+                      console.log("saved event", updatedEvent);
+                      console.log("saved error", err3);
+                  });   
+              });
+          });
+        }
+      });
+    });
+  }
+  catch(e){
+    console.log("error ", e)
+  }
+}
 
 // Log the server status to the console
 console.log('Server running at http://localhost:'+ port +'/');
-console.log('Socket running at ws://localhost:'+ port +'/');
-
+RenewEvents();
 // Use the module.exports property to expose our Express application instance for external usage
 module.exports = app;

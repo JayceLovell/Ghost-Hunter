@@ -38,7 +38,7 @@ exports.register = function(req, res){
 			req.session.username = req.body.username;
             
             // Use the 'response' object to send a JSON response
-            res.render('register-confirmation', {username: username});
+            res.render('register-confirmation', {username: req.session.username});
             
         }
     });

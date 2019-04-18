@@ -45,7 +45,7 @@ const UserSchema = new Schema({
 UserSchema.statics.findOneByUsername = function(username, callback) {
 	// Use the 'findOne' method to retrieve a user document
 	this.findOne({
-		username: new RegExp(username, 'i')
+		username: username
 	}, callback);
 };
 
