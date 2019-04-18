@@ -8,6 +8,7 @@ public class SpawnedGhost : MonoBehaviour
 {
 
     public string id;
+    public string eventid;
     public GameObject ghostPrefab;
     public GameObject[] allghosts;//= new Dictionary<string, GameObject>();
                                   // Start is called before the first frame update
@@ -20,12 +21,23 @@ public class SpawnedGhost : MonoBehaviour
 
     void OnMouseDown()
     {
-        GameObject.FindObjectOfType<GameManager>().ghost_id = id;
-        // this object was clicked - do something
-        Destroy(this.gameObject);
-        //SceneManager.LoadSceneAsync("MiniGame", LoadSceneMode.Additive);
-        SceneManager.LoadSceneAsync("MiniGame");
 
+
+        if (GameObject.Find("GameController").GetComponent<UpdatePlayerLocation>().Testing)
+        {
+            GameObject.FindObjectOfType<GameManager>().ghost_id = id;
+            GameObject.FindObjectOfType<GameManager>().Catch();
+        }
+        else
+        {
+
+
+            GameObject.FindObjectOfType<GameManager>().ghost_id = id;
+            // this object was clicked - do something
+            Destroy(this.gameObject);
+            //SceneManager.LoadSceneAsync("MiniGame", LoadSceneMode.Additive);
+            SceneManager.LoadSceneAsync("MiniGame");
+        }
     }
 
 

@@ -52,7 +52,7 @@ public class WebConnect : MonoBehaviour
         foreach (WebEvent e in newEvents) {
             bool alreadySpawned = false;
             foreach (SpawnedGhost sceneGhost in sceneGhosts) {
-                if (sceneGhost.id == e._id) {
+                if (sceneGhost.eventid == e._id) {
                     alreadySpawned = true;
                     break;
                 }
