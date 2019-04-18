@@ -29,6 +29,8 @@ public class MiniGameController : MonoBehaviour
     private GameManager _gameManager;
     private GhostMovement _ghoststats;
 
+    Vector3 lastHitPoint = new Vector3(-1000,-1000,-1000);
+
     // Start is called before the first frame update
     void Start()
     {
@@ -45,7 +47,14 @@ public class MiniGameController : MonoBehaviour
         // Add code here to choose ghost from network.
         // Right now its just doing random for testing
         // I recommend doing a method to call it from Game Manager
-        string id = GameObject.FindObjectOfType<GameManager>().ghost_id;
+        string id;
+        try
+        {
+             id = GameObject.FindObjectOfType<GameManager>().ghost_id;
+        }
+        catch (Exception e) {
+            id = "";
+        }   
         switch (id) {
             case "5c8ae14c08dec30017a19b3e":
                 _ghostToGet = Ghosts[3];
@@ -94,9 +103,38 @@ public class MiniGameController : MonoBehaviour
 
             if (Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out _hit, 100))
             {
-                
-                _drawer.SetPosition(_drawer.positionCount -1,_hit.point);
-                Instantiate(Obsticle, new Vector3(_hit.point.x,0,_hit.point.z),new Quaternion(0,0,0,0));
+                if (lastHitPoint == new Vector3(-1000, -1000, -1000))
+                {
+                    _drawer.SetPosition(_drawer.positionCount - 1, _hit.point);
+                    Instantiate(Obsticle, new Vector3(_hit.point.x, 0, _hit.point.z), new Quaternion(0, 0, 0, 0));
+                    lastHitPoint = new Vector3(_hit.point.x, 0, _hit.point.z);
+                }
+                else {
+                    Vector3 newHitPoint = new Vector3(_hit.point.x, 0, _hit.point.z);
+                    float distance = Vector3.Distance(lastHitPoint, newHitPoint) * 2;
+                    int cubeCount = (int) ( distance  / 2);
+                    Debug.Log("Cube count " + cubeCount);
+                    Debug.Log("Distance " + Vector3.Distance(lastHitPoint, newHitPoint) );
+                    Vector3 newLastHitpoint = lastHitPoint;
+
+                    for (int i = 1; i <= cubeCount; i++) {
+                        float offset =  (float)i / (float)cubeCount;
+                        Debug.Log("offset " + offset);
+                        Vector3 spawnPos = Vector3.Lerp(lastHitPoint, newHitPoint, offset);
+                        GameObject obj = Instantiate(Obsticle, spawnPos, new Quaternion(0, 0, 0, 0));
+                        newLastHitpoint = obj.transform.position;
+                    }
+
+                    lastHitPoint = newLastHitpoint;
+
+
+
+                    _drawer.SetPosition(_drawer.positionCount - 1, _hit.point);
+
+                }
+
+
+
             }
         }
         if (Input.GetMouseButtonUp(0) && MiniGameStart)
@@ -110,6 +148,8 @@ public class MiniGameController : MonoBehaviour
                     Destroy(trap);
                 }
             }
+
+            lastHitPoint = new Vector3(-1000, -1000, -1000);
         }
         if (ActiveGhost.GetComponent<GhostMovement>().Stuck && MiniGameStart)
         {
