@@ -12,7 +12,7 @@ module.exports = function() {
 	require('../app/models/ghost.server.model');
 	require('../app/models/location.server.model');
 	require('../app/models/inventory.server.model');
-	require('../app/models/events.server.model');
+	require('../app/models/event.server.model');
 
 
 
