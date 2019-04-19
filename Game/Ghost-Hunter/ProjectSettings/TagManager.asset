@@ -8,6 +8,7 @@ TagManager:
   - Boarder
   - Map
   - Ghost
+  - Waypoint
   layers:
   - Default
   - TransparentFX

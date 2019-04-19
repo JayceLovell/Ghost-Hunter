@@ -138,10 +138,30 @@ public class Location : MonoBehaviour
 
     public static float longitudeToScen(float lon)
     {
-        return (lon + 79.22752172f) * 36880.32669263936f;
+        return ((lon + 79.22752172f) * 36880.32669263936f) * 10;
     }
     public static float latitudeToScen(float lat)
     {
-        return (lat - 43.78543639f) * 36880.32669263936f;
+        return ((lat - 43.78543639f) * 36880.32669263936f) * 10;
     }
+
+
+    public static float latToZ(double lat)
+    {
+
+        lat = (lat - 43.78543639f) / 0.00001 * 0.12179047095976932582726898256213;
+        double z = lat;
+
+        return (float)z;
+    }
+
+    public static float lonToX(double lon)
+    {
+
+        lon = (lon + 79.22752172f) / 0.000001 * 0.00728553580298947812081345114627;
+        double x = lon;
+
+        return (float)x;
+    }
+
 }
