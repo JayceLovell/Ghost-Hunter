@@ -33,6 +33,10 @@ const UserSchema = new Schema({
 		type: Date,
 		// Create a default 'created' value
 		default: Date.now
+	},
+	isAdmin:{
+		type: Boolean,
+		default: false
 	}
 });
 
@@ -43,6 +47,11 @@ UserSchema.statics.findOneByUsername = function(username, callback) {
 	this.findOne({
 		username: new RegExp(username, 'i')
 	}, callback);
+};
+
+UserSchema.statics.findAll = function( callback) {
+	// Use the 'findOne' method to retrieve a user document
+	this.find({}, callback);
 };
 
 // Create the 'authenticate' instance method
