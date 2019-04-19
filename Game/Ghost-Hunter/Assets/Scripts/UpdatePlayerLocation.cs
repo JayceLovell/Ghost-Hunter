@@ -18,6 +18,9 @@ public class UpdatePlayerLocation : MonoBehaviour
     public Text Error;
     public Object[] AllGameObjects;
 
+    public GameObject northWestLocationObject;
+    public GameObject southEastLocationObject;
+
     public Vector3 PlayerGpsLocation { get => playerGpsLocation; set => playerGpsLocation = value; }
 
     // public GameObject Map;
@@ -39,9 +42,19 @@ public class UpdatePlayerLocation : MonoBehaviour
             //transform.position = new Vector3((TestLatitude * latScale), 0, (TestLongitude * longiScale));
             //transform.position = Quaternion.AngleAxis(TestLongitude, Vector3.up) * Quaternion.AngleAxis(TestLatitude, Vector3.right) * new Vector3(0, 0, 1);
 
-            float latToPos = (TestLongitude + 79.22752172f) * 36880.32669263936f;
-            float lonToPos = (TestLatitude - 43.78543639f) * 36880.32669263936f;
-            testpos = new Vector3(latToPos, 0, lonToPos);
+
+            float latScale = 61.4f / 0.000581f;  //latitude goes from 0(Npole) to 180(Spole)
+            float longiScale = 50.8f / 0.000656f; //longitude goes from 0 to 360 (Greenwich)
+            
+
+            float latToPos = Location.latToZ(TestLatitude);
+            float lonToPos = Location.lonToX(TestLongitude);
+            Vector2 currentLatLong = new Vector2(TestLatitude, TestLongitude);
+
+            playerGpsLocation = LatLon.GetUnityPosition(currentLatLong, northWestLocationObject.GetComponent<LocationMarker>().LatLon, southEastLocationObject.GetComponent<LocationMarker>().LatLon, northWestLocationObject.transform.position, southEastLocationObject.transform.position);
+
+
+            //testpos = new Vector3(latToPos, 0, lonToPos);
             AllGameObjects = Resources.FindObjectsOfTypeAll(typeof(GameObject));
             foreach (GameObject gameobject in AllGameObjects)
             {
@@ -52,14 +65,16 @@ public class UpdatePlayerLocation : MonoBehaviour
                     Error.enabled = true;
                 }
             }
-            playerGpsLocation = new Vector3(latToPos, 0, lonToPos);
+            //playerGpsLocation = new Vector3(lonToPos, 0, latToPos);
         }
         else
         {
-            float latToPos = (Location.Longitude + 79.22752172f) * 36880.32669263936f;
-            float lonToPos = (Location.Latitude - 43.78543639f) * 36880.32669263936f;
+            float latToPos = Location.latitudeToScen(Location.Latitude);
+            float lonToPos = Location.longitudeToScen(Location.Longitude);
+            Vector2 currentLatLong = new Vector2(Location.Latitude, Location.Longitude);
 
-            playerGpsLocation = new Vector3(latToPos, 0, lonToPos);
+            playerGpsLocation = LatLon.GetUnityPosition(currentLatLong, northWestLocationObject.GetComponent<LocationMarker>().LatLon, southEastLocationObject.GetComponent<LocationMarker>().LatLon, northWestLocationObject.transform.position, southEastLocationObject.transform.position);
+
 
         }
 
